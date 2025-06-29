@@ -25,6 +25,17 @@
   <link rel="stylesheet" href="css/aos.css">
 
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Remove border/shadow from slider and slides on mobile */
+    @media (max-width: 767.98px) {
+      #home-slider,
+      #home-slider .slide-item {
+        border: none !important;
+        box-shadow: none !important;
+        background-clip: border-box !important;
+      }
+    }
+  </style>
 
 </head>
 <body>
@@ -115,9 +126,9 @@
     </header>
 
     <!-- Image Slider Start -->
-    <div class="site-blocks-cover overlay" data-aos="fade" id="home-slider" style="padding: 0; background: none;">
+    <div class="site-blocks-cover overlay" data-aos="fade" id="home-slider" style="padding: 0; background: none; border: none; box-shadow: none;">
       <div class="slide-one-item home-slider owl-carousel">
-        <div class="slide-item" style="background-image: url('images/img_1.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center;">
+        <div class="slide-item" style="background-image: url('images/img_1.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;">
           <div class="container h-100 d-flex align-items-center justify-content-center">
             <div class="col-md-8 text-center" style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 10px;">
               <h1 class="mb-2">Welcome to The Vedic Wedding</h1>
@@ -125,10 +136,10 @@
             </div>
           </div>
         </div>
-        <div class="slide-item" style="background-image: url('images/img_2.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center;"></div>
-        <div class="slide-item" style="background-image: url('images/img_3.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center;"></div>
-        <div class="slide-item" style="background-image: url('images/img_4.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center;"></div>
-        <div class="slide-item" style="background-image: url('images/img_5.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center;"></div>
+        <div class="slide-item" style="background-image: url('images/img_2.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
+        <div class="slide-item" style="background-image: url('images/img_3.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
+        <div class="slide-item" style="background-image: url('images/img_4.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
+        <div class="slide-item" style="background-image: url('images/img_5.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
       </div>
     </div>
     <!-- Image Slider End -->
