@@ -274,13 +274,28 @@ a {
     left: 0;
     top: 0;
     margin-top: -10px; /* Less negative margin for better vertical alignment */
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    min-width: 120px;
+}
+.site-navbar .site-logo img {
+    display: block;
+    max-height: 48px;
+    max-width: 160px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+/* If using text fallback, style as before */
+.site-navbar .site-logo span {
     color: #000 !important;
-    font-size: 1.6rem !important; /* Slightly smaller for single line */
+    font-size: 1.6rem !important;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: 700;
     letter-spacing: 0.05em;
-    line-height: 1; /* Force single line */
-    white-space: nowrap; /* Prevent wrapping */
+    line-height: 1;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
