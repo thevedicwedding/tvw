@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body class="single">
 
   <div class="site-wrap">
 
@@ -288,7 +288,7 @@
   <script>
     $(document).ready(function(){
       $('#lightgallery').lightGallery({
-        download: false, // Disable download button in lightGallery
+        download: false, // Disable download button in lightGallery (including fullscreen)
         subHtmlSelectorRelative: true,
         getCaptionFromTitleOrAlt: false,
         addClass: 'no-photo-desc',
@@ -296,16 +296,34 @@
         onBeforeSlide: function(event, prevIndex, index) {
           var $lg = $('#lightgallery');
           $lg.find('.lg-sub-html').hide();
+        },
+        // Remove grayscale/color hover effect in fullscreen as well
+        onAfterOpen: function() {
+          setTimeout(function() {
+            $('.lg-outer img').css({
+              'filter': 'none',
+              '-webkit-filter': 'none',
+              'transition': 'none'
+            });
+            $('.lg-outer img').off('mouseenter mouseleave');
+          }, 100);
+        },
+        // Disable right-click in fullscreen
+        onSlideItemLoad: function() {
+          setTimeout(function() {
+            $('.lg-outer img').on('contextmenu', function(e) { return false; });
+            $('.lg-outer img').on('dragstart', function(e) { return false; });
+          }, 100);
         }
       });
       // Also hide sub-html on init (in case first image shows it)
       $('#lightgallery').on('onAfterOpen.lg', function(event){
         $('.lg-sub-html').hide();
       });
-      // Disable right-click and drag on all images
+      // Disable right-click and drag on all images (main page)
       $('img').on('contextmenu', function(e) { return false; });
       $('img').on('dragstart', function(e) { return false; });
-      // Remove grayscale/color hover effect on gallery images
+      // Remove grayscale/color hover effect on gallery images (main page)
       $('#lightgallery img').css({
         'filter': 'none',
         '-webkit-filter': 'none',
