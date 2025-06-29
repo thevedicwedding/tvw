@@ -13,15 +13,18 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Section headings on landing page (index.html) should be white */
+
+/* Section headings default to black on all pages */
 .site-section-heading,
 .site-section-heading:after,
+
 .site-section-heading.text-center:after {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 
 section h1, section h2, section h3, section h4, section h5, section h6 {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 nav, .site-navbar, .site-navbar .site-logo, .site-navbar .site-navigation .site-menu > li > a, .site-navbar .site-navigation .site-menu .has-children > a, .site-navbar .site-navigation .site-menu .has-children .dropdown a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > ul, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children:focus > a, .site-navbar .site-navigation .site-menu .has-children:active > a {
