@@ -305,6 +305,13 @@
       // Disable right-click and drag on all images
       $('img').on('contextmenu', function(e) { return false; });
       $('img').on('dragstart', function(e) { return false; });
+      // Remove grayscale/color hover effect on gallery images
+      $('#lightgallery img').css({
+        'filter': 'none',
+        '-webkit-filter': 'none',
+        'transition': 'none'
+      });
+      $('#lightgallery img').off('mouseenter mouseleave');
     });
   </script>
 
