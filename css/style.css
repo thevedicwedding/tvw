@@ -1295,6 +1295,38 @@ img {
     -webkit-filter: grayscale(0);
     -webkit-transform: scale(1.01); }
 
+/* Disable grayscale-to-color transition on image hover */
+.image-wrap-2 img,
+#lightgallery .item img,
+img {
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+}
+.image-wrap-2:hover img,
+#lightgallery .item:hover img,
+img:hover {
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+}
+
+/* Disable grayscale and color transition for lightGallery fullscreen images */
+.lg-outer img.lg-image {
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+}
+.lg-outer img.lg-image:hover {
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+}
+
 /* Category boxes (Nature, Portrait, Animals, Sports, etc.) background white for landing page */
 .category-box,
 .gallery-category,
