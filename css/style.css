@@ -273,19 +273,26 @@ a {
     position: absolute;
     left: 0;
     top: 0;
-    margin-top: -10px; /* Less negative margin for better vertical alignment */
+    height: 100%;
     display: flex;
     align-items: center;
-    min-height: 48px;
+    justify-content: center;
     min-width: 120px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    z-index: 10;
 }
 .site-navbar .site-logo img {
     display: block;
-    max-height: 48px;
+    max-height: 60%;
     max-width: 160px;
     width: auto;
     height: auto;
     object-fit: contain;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
 }
 /* If using text fallback, style as before */
 .site-navbar .site-logo span {
