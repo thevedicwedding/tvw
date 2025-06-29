@@ -104,12 +104,13 @@ a {
   background: #000; }
 
 /* Contact form input fields: set text color to black */
+/* Contact form input fields: set text color to black, background to black, and border to black */
 .form-control {
   height: 43px;
   border-radius: 0;
-  background: transparent;
-  border-color: #777;
-  color: #000 !important;
+  background: #000 !important;
+  border-color: #000 !important;
+  color: #fff !important;
 }
   .form-control:active, .form-control:focus {
     border-color: #20c997;
