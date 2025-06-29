@@ -39,12 +39,20 @@
         box-shadow: none !important;
         outline: none !important;
         background-clip: border-box !important;
+        background: transparent !important;
+      }
+      #home-slider {
+        background: transparent !important;
       }
       #home-slider .slide-item {
         min-height: 300px !important;
         height: 35vh !important;
         background-size: cover !important;
         background-position: center !important;
+      }
+      /* Remove extra space below slider on mobile/tablet */
+      .slider-spacer {
+        display: none !important;
       }
     }
     @media (max-width: 575.98px) {
@@ -155,7 +163,7 @@
     </div>
 
     <!-- Image Slider End -->
-    <div style="height: 40px; width: 100%;"></div>
+    <div class="slider-spacer" style="height: 40px; width: 100%;"></div>
 
 
 
