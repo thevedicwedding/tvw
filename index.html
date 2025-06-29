@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home &mdash; The Vedic Wedding</title>
+  <title>Photosen &mdash; Colorlib Website Template</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -30,35 +30,7 @@
 <body>
 
   <div class="site-wrap">
-    <!-- Image Slider Start -->
-    <div class="site-blocks-cover overlay" style="background-image: url('images/img_1.jpg');" data-aos="fade" id="home-slider">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-md-8 text-center" style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 10px;">
-            <h1 class="mb-2">Welcome to The Vedic Wedding</h1>
-            <p class="mb-4">Capturing your moments beautifully</p>
-          </div>
-        </div>
-      </div>
-      <div class="slide-one-item home-slider owl-carousel">
-        <div class="slide-item" style="background-image: url('images/img_1.jpg');">
-          <img src="images/img_1.jpg" alt="Fashion" class="img-fluid d-none">
-        </div>
-        <div class="slide-item" style="background-image: url('images/img_2.jpg');">
-          <img src="images/img_2.jpg" alt="Food" class="img-fluid d-none">
-        </div>
-        <div class="slide-item" style="background-image: url('images/img_3.jpg');">
-          <img src="images/img_3.jpg" alt="Product" class="img-fluid d-none">
-        </div>
-        <div class="slide-item" style="background-image: url('images/img_4.jpg');">
-          <img src="images/img_4.jpg" alt="Pre Wedding" class="img-fluid d-none">
-        </div>
-        <div class="slide-item" style="background-image: url('images/img_5.jpg');">
-          <img src="images/img_5.jpg" alt="Wedding" class="img-fluid d-none">
-        </div>
-      </div>
-    </div>
-    <!-- Image Slider End -->
+
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -141,6 +113,36 @@
       </div>
       
     </header>
+
+    <!-- Image Slider Start -->
+    <div class="site-blocks-cover overlay" style="background-image: url('images/img_1.jpg');" data-aos="fade" id="home-slider">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-8 text-center" style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 10px;">
+            <h1 class="mb-2">Welcome to The Vedic Wedding</h1>
+            <p class="mb-4">Capturing your moments beautifully</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-one-item home-slider owl-carousel">
+        <div class="slide-item" style="background-image: url('images/img_1.jpg'); min-height: 400px; background-size: cover; background-position: center;">
+          <img src="images/img_1.jpg" alt="Fashion" class="img-fluid d-none">
+        </div>
+        <div class="slide-item" style="background-image: url('images/img_2.jpg'); min-height: 400px; background-size: cover; background-position: center;">
+          <img src="images/img_2.jpg" alt="Food" class="img-fluid d-none">
+        </div>
+        <div class="slide-item" style="background-image: url('images/img_3.jpg'); min-height: 400px; background-size: cover; background-position: center;">
+          <img src="images/img_3.jpg" alt="Product" class="img-fluid d-none">
+        </div>
+        <div class="slide-item" style="background-image: url('images/img_4.jpg'); min-height: 400px; background-size: cover; background-position: center;">
+          <img src="images/img_4.jpg" alt="Pre Wedding" class="img-fluid d-none">
+        </div>
+        <div class="slide-item" style="background-image: url('images/img_5.jpg'); min-height: 400px; background-size: cover; background-position: center;">
+          <img src="images/img_5.jpg" alt="Wedding" class="img-fluid d-none">
+        </div>
+      </div>
+    </div>
+    <!-- Image Slider End -->
 
 
 
@@ -275,19 +277,23 @@
   <script src="js/main.js"></script>
   <script>
     $(document).ready(function(){
-      // Initialize Owl Carousel for home slider
-      $('.slide-one-item').owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        nav: true,
-        dots: true,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        smartSpeed: 1000
-      });
+      // Initialize Owl Carousel for home slider (ensure only one instance and after DOM is ready)
+      setTimeout(function() {
+        if ($('.slide-one-item').length && typeof $.fn.owlCarousel === 'function') {
+          $('.slide-one-item').owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: false,
+            nav: true,
+            dots: true,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            smartSpeed: 1000
+          });
+        }
+      }, 200);
     });
   </script>
   
