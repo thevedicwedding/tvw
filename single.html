@@ -296,6 +296,16 @@
         onBeforeSlide: function(event, prevIndex, index) {
           var $lg = $('#lightgallery');
           $lg.find('.lg-sub-html').hide();
+          // Remove grayscale in fullscreen for the current slide
+          setTimeout(function() {
+            var $img = $('.lg-current .lg-image');
+            $img.css({
+              'filter': 'none',
+              '-webkit-filter': 'none',
+              'transition': 'none'
+            });
+            $img.off('mouseenter mouseleave');
+          }, 50);
         },
         // Remove grayscale/color hover effect in fullscreen as well
         onAfterOpen: function() {
@@ -313,6 +323,12 @@
           setTimeout(function() {
             $('.lg-outer img').on('contextmenu', function(e) { return false; });
             $('.lg-outer img').on('dragstart', function(e) { return false; });
+            // Remove grayscale for all images in fullscreen
+            $('.lg-outer img').css({
+              'filter': 'none',
+              '-webkit-filter': 'none',
+              'transition': 'none'
+            });
           }, 100);
         }
       });
