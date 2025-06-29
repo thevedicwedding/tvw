@@ -1291,3 +1291,13 @@ img {
     filter: none;
     -webkit-filter: grayscale(0);
     -webkit-transform: scale(1.01); }
+
+/* Category boxes (Nature, Portrait, Animals, Sports, etc.) background white for landing page */
+.category-box,
+.gallery-category,
+.section-category,
+.site-block-category {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #eee;
+}
