@@ -330,9 +330,9 @@ a {
       }
       .site-navbar .site-navigation .site-menu > li > a:hover,
       .site-navbar .site-navigation .site-menu > li > a:focus {
-        color: #fff !important;
-        background: #d32f2f !important;
-        border-radius: 4px;
+        color: #d32f2f !important;
+        background: none !important;
+        border-radius: 0;
       }
     .site-navbar .site-navigation .site-menu .has-children {
       position: relative; }
@@ -449,9 +449,9 @@ a {
 }
 .site-menu[data-class="social"] a:hover,
 .site-menu[data-class="social"] a:focus {
-  color: #fff !important;
-  background: #d32f2f !important;
-  border-radius: 4px;
+  color: #d32f2f !important;
+  background: none !important;
+  border-radius: 0;
 }
 
 /* Add custom icons for Pinterest and Behance if not present in icomoon */
