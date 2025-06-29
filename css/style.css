@@ -1337,6 +1337,14 @@ img:hover {
   border: 1px solid #eee;
 }
 
+/* Make category box text red for landing page (index.html) */
+body.index .category-box,
+body.index .gallery-category,
+body.index .section-category,
+body.index .site-block-category {
+  color: #d32f2f !important;
+}
+
 /* Force mobile menu button (icon-menu) color to black */
 .site-menu-toggle.text-black .icon-menu,
 .site-menu-toggle.text-black span.icon-menu {
