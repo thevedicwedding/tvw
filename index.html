@@ -54,11 +54,24 @@
       .slider-spacer {
         display: none !important;
       }
+      /* Ensure Owl Carousel is visible and working on mobile */
+      #home-slider .owl-carousel,
+      #home-slider .owl-stage-outer,
+      #home-slider .owl-stage,
+      #home-slider .owl-item {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      #home-slider .slide-item {
+        background-color: transparent !important;
+      }
     }
     @media (max-width: 575.98px) {
       #home-slider .slide-item {
         min-height: 180px !important;
         height: 28vh !important;
+        background-color: transparent !important;
       }
     }
   </style>
