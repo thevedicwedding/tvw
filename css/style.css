@@ -325,9 +325,15 @@ a {
         letter-spacing: .1em;
         color: rgba(255, 255, 255, 0.5);
         font-size: 12px;
-        text-decoration: none !important; }
-        .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #20c997; }
+        text-decoration: none !important;
+        transition: background 0.2s, color 0.2s;
+      }
+      .site-navbar .site-navigation .site-menu > li > a:hover,
+      .site-navbar .site-navigation .site-menu > li > a:focus {
+        color: #fff !important;
+        background: #d32f2f !important;
+        border-radius: 4px;
+      }
     .site-navbar .site-navigation .site-menu .has-children {
       position: relative; }
       .site-navbar .site-navigation .site-menu .has-children > a {
@@ -433,11 +439,19 @@ a {
   padding: 0 !important;
 }
 .site-menu[data-class="social"] a,
+.site-menu[data-class="social"] a,
 .site-menu[data-class="social"] a:hover {
   color: #000 !important;
   font-size: 1.1rem;
   padding: 0 4px !important;
   vertical-align: middle;
+  transition: background 0.2s, color 0.2s;
+}
+.site-menu[data-class="social"] a:hover,
+.site-menu[data-class="social"] a:focus {
+  color: #fff !important;
+  background: #d32f2f !important;
+  border-radius: 4px;
 }
 
 /* Add custom icons for Pinterest and Behance if not present in icomoon */
