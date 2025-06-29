@@ -275,11 +275,14 @@ a {
     top: 0;
     margin-top: -10px; /* Less negative margin for better vertical alignment */
     color: #000 !important;
-    font-size: 1.7rem !important; /* Reduce logo font size */
+    font-size: 1.6rem !important; /* Slightly smaller for single line */
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: 700;
     letter-spacing: 0.05em;
-    line-height: 1.1;
+    line-height: 1; /* Force single line */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
   .site-navbar .site-navigation.border-bottom {
     border-bottom: 1px solid #f3f3f4 !important; }
