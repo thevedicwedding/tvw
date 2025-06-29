@@ -271,8 +271,8 @@ a {
 /* Navbar logo adjustments */
 .site-navbar .site-logo {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 24px;
+    top: -8px;
     height: 72px;
     display: flex;
     align-items: center;
