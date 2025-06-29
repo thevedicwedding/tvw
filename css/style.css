@@ -4,7 +4,39 @@ body {
   color: #000;
   font-weight: 300;
   font-size: 1rem;
-  background: #fff; }
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000 !important;
+}
+
+.site-section-heading,
+.site-section-heading:after,
+.site-section-heading.text-center:after {
+  color: #000 !important;
+}
+
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  color: #000 !important;
+}
+
+nav, .site-navbar, .site-navbar .site-logo, .site-navbar .site-navigation .site-menu > li > a, .site-navbar .site-navigation .site-menu .has-children > a, .site-navbar .site-navigation .site-menu .has-children .dropdown a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > ul, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children:focus > a, .site-navbar .site-navigation .site-menu .has-children:active > a {
+  color: #000 !important;
+}
+
+.site-menu[data-class="social"] a,
+.site-menu[data-class="social"] a:hover {
+  color: #000 !important;
+}
+
+.site-mobile-menu .site-nav-wrap a,
+.site-mobile-menu .site-nav-wrap a:hover,
+.site-mobile-menu .site-nav-wrap li.active > a {
+  color: #000 !important;
+}
+
+/* Remove any white/rgba(255,255,255,...) color from nav and menu items */
 
 ::-moz-selection {
   background: #fff;
