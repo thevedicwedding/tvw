@@ -285,10 +285,26 @@
   <script src="js/jquery.mousewheel.min.js"></script>
 
   <script src="js/main.js"></script>
-  
   <script>
     $(document).ready(function(){
-      $('#lightgallery').lightGallery();
+      $('#lightgallery').lightGallery({
+        download: false, // Disable download button in lightGallery
+        subHtmlSelectorRelative: true,
+        getCaptionFromTitleOrAlt: false,
+        addClass: 'no-photo-desc',
+        // Hide photo description by overriding the default sub-html
+        onBeforeSlide: function(event, prevIndex, index) {
+          var $lg = $('#lightgallery');
+          $lg.find('.lg-sub-html').hide();
+        }
+      });
+      // Also hide sub-html on init (in case first image shows it)
+      $('#lightgallery').on('onAfterOpen.lg', function(event){
+        $('.lg-sub-html').hide();
+      });
+      // Disable right-click and drag on all images
+      $('img').on('contextmenu', function(e) { return false; });
+      $('img').on('dragstart', function(e) { return false; });
     });
   </script>
 
