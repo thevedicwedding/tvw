@@ -389,6 +389,16 @@ a {
   .site-menu[data-class="social"] a:hover {
     color: #fff; }
 
+/* Add custom icons for Pinterest and Behance if not present in icomoon */
+.icon-pinterest:before {
+  content: "\f0d2";
+  font-family: 'icomoon', 'FontAwesome', sans-serif;
+}
+.icon-behance:before {
+  content: "\f1b4";
+  font-family: 'icomoon', 'FontAwesome', sans-serif;
+}
+
 .site-mobile-menu {
   width: 300px;
   position: fixed;
