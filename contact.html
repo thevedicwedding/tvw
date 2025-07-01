@@ -125,17 +125,17 @@
 
 <div class="row">
 <div class="col-lg-8 mb-5">
-<form action="#">
+<form action="mailto:thevedicwedding@gmail.com" method="POST" enctype="text/plain" onsubmit="return validateContactForm();">
 
 
 <div class="row form-group">
 <div class="col-md-6 mb-3 mb-md-0">
 <label class="text-black" for="fname">First Name</label>
-<input type="text" id="fname" class="form-control" style="color:#000;">
+<input type="text" id="fname" name="First Name" class="form-control" style="color:#000;" required>
 </div>
 <div class="col-md-6">
 <label class="text-black" for="lname">Last Name</label>
-<input type="text" id="lname" class="form-control" style="color:#000;">
+<input type="text" id="lname" name="Last Name" class="form-control" style="color:#000;" required>
 </div>
 </div>
 
@@ -143,7 +143,7 @@
 
 <div class="col-md-12">
 <label class="text-black" for="email">Email</label> 
-<input type="email" id="email" class="form-control" style="color:#000;">
+<input type="email" id="email" name="Email" class="form-control" style="color:#000;" required>
 </div>
 </div>
 
@@ -151,14 +151,14 @@
 
 <div class="col-md-12">
 <label class="text-black" for="subject">Subject</label> 
-<input type="subject" id="subject" class="form-control" style="color:#000;">
+<input type="text" id="subject" name="Subject" class="form-control" style="color:#000;">
 </div>
 </div>
 
 <div class="row form-group">
 <div class="col-md-12">
 <label class="text-black" for="message">Message</label> 
-<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..." style="color:#000;"></textarea>
+<textarea name="Message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..." style="color:#000;"></textarea>
 </div>
 </div>
 
@@ -174,14 +174,17 @@
 <div class="col-lg-3 ml-auto">
 <div class="mb-3">
 <p class="mb-0 font-weight-bold text-black">Address</p>
-<p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+<p class="mb-4">Shop no-3, AS-3, Block- B Arjunpur, Kolkata - 700059</p>
 
 <p class="mb-0 font-weight-bold text-black">Phone</p>
-<p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+<p class="mb-4"><a href="tel:+919007900710">+91 9007900710</a></p>
 
 <p class="mb-0 font-weight-bold text-black">Email Address</p>
-<p class="mb-0"><a href="#">youremail@domain.com</a></p>
+<p class="mb-0"><a href="mailto:thevedicwedding@gmail.com">thevedicwedding@gmail.com</a></p>
 
+</div>
+<div class="mb-3">
+  <iframe src="https://www.google.com/maps?q=Shop+no-3,+AS-3,+Block-+B+Arjunpur,+Kolkata+-+700059&output=embed" width="100%" height="220" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </div>
 
 </div>
@@ -237,6 +240,18 @@
 <script src="js/jquery.mousewheel.min.js"></script>
 
 <script src="js/main.js"></script>
+<script>
+function validateContactForm() {
+  var fname = document.getElementById('fname').value.trim();
+  var lname = document.getElementById('lname').value.trim();
+  var email = document.getElementById('email').value.trim();
+  if (!fname || !lname || !email) {
+    alert('Please fill in all mandatory fields: First Name, Last Name, and Email.');
+    return false;
+  }
+  return true;
+}
+</script>
 
 <script>
 $(document).ready(function(){
