@@ -103,7 +103,7 @@
 
 
 
-    <header class="site-navbar py-3" role="banner">
+    <header class="site-navbar py-3 fixed-top" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: transparent;">
 
       <div class="container-fluid">
         <div class="row align-items-center">
@@ -288,6 +288,43 @@
   <script src="js/jquery.mousewheel.min.js"></script>
 
   <script src="js/main.js"></script>
+  <script>
+    // Sticky transparent-to-solid navbar on scroll direction
+    (function() {
+      var navbar = document.getElementById('main-navbar');
+      var lastScroll = window.scrollY;
+      var solidBg = '#fff'; // Change to your theme color if needed
+      var transparentBg = 'rgba(255,255,255,0)';
+      var solidClass = 'navbar-solid';
+      var transparentClass = 'navbar-transparent';
+      function setSolid() {
+        navbar.style.background = solidBg;
+        navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
+        navbar.classList.add(solidClass);
+        navbar.classList.remove(transparentClass);
+      }
+      function setTransparent() {
+        navbar.style.background = transparentBg;
+        navbar.style.boxShadow = 'none';
+        navbar.classList.add(transparentClass);
+        navbar.classList.remove(solidClass);
+      }
+      setTransparent();
+      window.addEventListener('scroll', function() {
+        var currentScroll = window.scrollY;
+        if (currentScroll <= 10) {
+          setTransparent();
+        } else if (currentScroll > lastScroll) {
+          // Scrolling down
+          setTransparent();
+        } else {
+          // Scrolling up
+          setSolid();
+        }
+        lastScroll = currentScroll;
+      });
+    })();
+  </script>
   <script>
     $(document).ready(function(){
       // Initialize Owl Carousel for home slider (ensure only one instance and after DOM is ready)
