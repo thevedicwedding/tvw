@@ -29,60 +29,6 @@
     h2 {
       color: #d32f2f !important;
     }
-    /* Remove border/shadow from slider and slides on mobile and tablet */
-    @media (max-width: 991.98px) {
-      #home-slider,
-      #home-slider .slide-item,
-      #home-slider .owl-stage-outer,
-      #home-slider .owl-stage,
-      #home-slider .owl-item,
-      #home-slider .owl-carousel,
-      #home-slider .owl-theme {
-        border: none !important;
-        box-shadow: none !important;
-        outline: none !important;
-        background-clip: border-box !important;
-        background: transparent !important;
-      }
-      #home-slider {
-        background: transparent !important;
-      }
-      #home-slider .slide-item {
-        min-height: 300px !important;
-        height: 35vh !important;
-        background-size: cover !important;
-        background-position: center !important;
-      }
-      /* Remove extra space below slider on mobile/tablet */
-      .slider-spacer {
-        display: none !important;
-      }
-      /* Ensure Owl Carousel is visible and working on mobile */
-      #home-slider .owl-carousel,
-      #home-slider .owl-stage-outer,
-      #home-slider .owl-stage,
-      #home-slider .owl-item {
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        height: auto !important;
-        min-height: 0 !important;
-        background: transparent !important;
-      }
-      #home-slider .slide-item {
-        background-color: transparent !important;
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-      }
-    }
-    @media (max-width: 575.98px) {
-      #home-slider .slide-item {
-        min-height: 180px !important;
-        height: 28vh !important;
-        background-color: transparent !important;
-      }
-    }
   </style>
 
 </head>
@@ -169,17 +115,16 @@
     <div class="mobile-landing-image d-block d-lg-none" id="mobile-landing-image">
       <img src="images/mobile-landing.jpg" alt="Mobile Landing">
     </div>
-    <div class="d-block d-lg-none" style="height:40px;"></div>
     <!-- Mobile Static Image End -->
 
     <!-- Image Slider Start -->
-    <div class="site-blocks-cover overlay d-none d-lg-block" data-aos="fade" id="home-slider" style="padding: 0; background: none; border: none; box-shadow: none;">
+    <div class="site-blocks-cover overlay d-none d-lg-block" data-aos="fade" id="home-slider">
       <div class="slide-one-item home-slider owl-carousel">
-        <div class="slide-item" style="background-image: url('images/img_1.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-        <div class="slide-item" style="background-image: url('images/img_2.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-        <div class="slide-item" style="background-image: url('images/img_3.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-        <div class="slide-item" style="background-image: url('images/img_4.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-        <div class="slide-item" style="background-image: url('images/img_5.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
+        <div class="slide-item" style="background-image: url('images/img_1.jpg');"></div>
+        <div class="slide-item" style="background-image: url('images/img_2.jpg');"></div>
+        <div class="slide-item" style="background-image: url('images/img_3.jpg');"></div>
+        <div class="slide-item" style="background-image: url('images/img_4.jpg');"></div>
+        <div class="slide-item" style="background-image: url('images/img_5.jpg');"></div>
       </div>
     </div>
     <!-- Image Slider End -->
