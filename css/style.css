@@ -319,23 +319,32 @@ a {
     .site-navbar .site-navigation .site-menu > li {
       display: inline-block;
       padding: 10px 5px; }
-      .site-navbar .site-navigation .site-menu > li > a {
-        padding: 10px 10px;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 12px;
-        text-decoration: none !important;
-        transition: background 0.2s, color 0.2s;
-      }
-      .site-navbar .site-navigation .site-menu > li > a:hover,
-      .site-navbar .site-navigation .site-menu > li > a:focus {
-        color: #d32f2f !important;
+
+  .site-navbar .site-navigation .site-menu > li > a {
+    padding: 10px 10px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #111 !important;
+    font-size: 13px;
+    text-decoration: none !important;
+    background: none !important;
+    border-radius: 0 !important;
+    transition: background 0.2s, color 0.2s;
+  }
+  .site-navbar .site-navigation .site-menu > li > a:hover,
+  .site-navbar .site-navigation .site-menu > li > a:focus {
+    color: #d32f2f !important;
+    background: none !important;
+    border-radius: 0 !important;
+  }
+
+      /* Dropdown menu items: only text color changes to red on hover */
+      .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a,
+      .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:visited {
+        color: #111 !important;
         background: none !important;
         border-radius: 0 !important;
       }
-
-      /* Dropdown menu items: only text color changes to red on hover */
       .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:hover,
       .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:focus {
         color: #d32f2f !important;
@@ -372,7 +381,7 @@ a {
         padding: 0px 0;
         margin-top: 20px;
         margin-left: 0px;
-        background: #fff;
+        background: #fff !important;
         -webkit-transition: 0.2s 0s;
         -o-transition: 0.2s 0s;
         transition: 0.2s 0s; }
