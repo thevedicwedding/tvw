@@ -672,7 +672,7 @@ a {
     height: 30vh;
     max-height: 30vh;
   }
-/* Mobile landing image optimization */
+/* Mobile landing image optimization (previous version) */
 .landing-mobile-img {
   display: none;
 }
