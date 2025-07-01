@@ -103,7 +103,7 @@
 
 
 
-    <header class="site-navbar py-3 fixed-top navbar-transparent" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: transparent; z-index: 1030; width: 100vw; left: 0; right: 0;">
+    <header class="site-navbar py-3 fixed-top navbar-solid" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: #fff; z-index: 1030; width: 100vw; left: 0; right: 0;">
 
       <div class="container-fluid">
         <div class="row align-items-center">
@@ -289,11 +289,6 @@
 
   <script src="js/main.js"></script>
   <style>
-    .navbar-transparent {
-      background: rgba(255,255,255,0) !important;
-      box-shadow: none !important;
-      transition: background 0.3s, box-shadow 0.3s;
-    }
     .navbar-solid {
       background: #fff !important;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
@@ -317,44 +312,12 @@
     }
   </style>
   <script>
-    // Sticky transparent-to-solid navbar on scroll direction (robust version)
+    // Always solid navbar, no transparency
     (function() {
       var navbar = document.getElementById('main-navbar');
-      var lastScroll = window.scrollY;
-      var ticking = false;
-      var isSolid = false;
-      function setSolid() {
-        navbar.classList.add('navbar-solid');
-        navbar.classList.remove('navbar-transparent');
-        isSolid = true;
-      }
-      function setTransparent() {
-        navbar.classList.add('navbar-transparent');
-        navbar.classList.remove('navbar-solid');
-        isSolid = false;
-      }
-      function updateNavbar() {
-        var currentScroll = window.scrollY;
-        if (currentScroll <= 10) {
-          setTransparent();
-        } else if (currentScroll > lastScroll) {
-          // Scrolling down
-          setTransparent();
-        } else {
-          // Scrolling up
-          setSolid();
-        }
-        lastScroll = currentScroll;
-        ticking = false;
-      }
-      window.addEventListener('scroll', function() {
-        if (!ticking) {
-          window.requestAnimationFrame(updateNavbar);
-          ticking = true;
-        }
-      });
-      // Initial state
-      setTransparent();
+      navbar.classList.add('navbar-solid');
+      navbar.classList.remove('navbar-transparent');
+      navbar.style.background = '#fff'; // Change to your theme color if needed
     })();
   </script>
   <script>
