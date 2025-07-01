@@ -43,17 +43,14 @@
 
 
 
-    <header class="site-navbar py-3" role="banner">
-
+    <header class="site-navbar py-3 fixed-top navbar-solid" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: #fff; z-index: 1030; width: 100vw; left: 0; right: 0;">
       <div class="container-fluid">
         <div class="row align-items-center">
-
           <div class="col-6 col-xl-2" data-aos="fade-down">
-<h1 class="mb-0"><a href="index.html" class="site-logo"><img src="tvwlogo.png" alt="The Vedic Wedding Logo"><span class="sr-only">The Vedic Wedding</span></a></h1>
+            <h1 class="mb-0"><a href="index.html" class="site-logo"><img src="tvwlogo.png" alt="The Vedic Wedding Logo"><span class="sr-only">The Vedic Wedding</span></a></h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li><a href="index.html">Home</a></li>
                 <li class="has-children">
@@ -73,7 +70,6 @@
               </ul>
             </nav>
           </div>
-
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
@@ -94,15 +90,20 @@
                 </li>
               </ul>
             </div>
-
             <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
           </div>
-
         </div>
       </div>
-      
     </header>
+    <script>
+      // Always solid navbar, no transparency
+      (function() {
+        var navbar = document.getElementById('main-navbar');
+        navbar.classList.add('navbar-solid');
+        navbar.classList.remove('navbar-transparent');
+        navbar.style.background = '#fff'; // Change to your theme color if needed
+      })();
+    </script>
 
 
 
@@ -220,20 +221,14 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 text-center mt-4">
-            <p style="color:#888;">Send your YouTube video links to display them here!</p>
-          </div>
-        </div>
+        <!-- Removed YouTube video links prompt -->
       </div>
     </div>
 
     <div class="footer py-4">
       <div class="container-fluid text-center">
         <p>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          <!-- Copyright and Colorlib attribution removed -->
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          &copy; <script>document.write(new Date().getFullYear());</script> Pallab Photography. All rights reserved. | Website by <a href="https://www.thevedicwedding.com" target="_blank" rel="noopener">The Vedic Wedding</a>
         </p>
       </div>
     </div>
