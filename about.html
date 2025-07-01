@@ -43,46 +43,25 @@
 
 
 
-    <header class="site-navbar py-3" role="banner">
 
+    <!-- Fixed, solid, always-white navigation bar (updated, no dropdowns, matches new nav structure) -->
+    <header class="site-navbar py-3 navbar-solid" role="banner" style="position:fixed;top:0;left:0;width:100%;z-index:1000;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
       <div class="container-fluid">
         <div class="row align-items-center">
-
           <div class="col-6 col-xl-2" data-aos="fade-down">
-<h1 class="mb-0"><a href="index.html" class="site-logo"><img src="tvwlogo.png" alt="The Vedic Wedding Logo"><span class="sr-only">The Vedic Wedding</span></a></h1>
+            <h1 class="mb-0"><a href="index.html" class="site-logo"><img src="tvwlogo.png" alt="The Vedic Wedding Logo"><span class="sr-only">The Vedic Wedding</span></a></h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li><a href="index.html">Home</a></li>
-                <li class="has-children">
-                  <a href="single.html">Gallery</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Nature</a></li>
-                    <li><a href="#">Portrait</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Architecture</a></li>
-                    <li><a href="#">Animals</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Travel</a></li>
-                    <li class="has-children">
-                      <a href="#">Sub Menu</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="single.html">Gallery</a></li>
+                <li><a href="video.html">Video</a></li>
                 <li class="active"><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </nav>
           </div>
-
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
@@ -103,15 +82,21 @@
                 </li>
               </ul>
             </div>
-
             <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
           </div>
-
         </div>
       </div>
-      
     </header>
+
+    <script>
+      // Adjust body padding-top to navbar height to prevent content overlap
+      document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.querySelector('.site-navbar');
+        if (navbar) {
+          document.body.style.paddingTop = navbar.offsetHeight + 'px';
+        }
+      });
+    </script>
 
 
 
