@@ -306,13 +306,20 @@
       var navbar = document.getElementById('main-navbar');
       var lastScroll = window.scrollY;
       var ticking = false;
+      var isSolid = false;
       function setSolid() {
-        navbar.classList.add('navbar-solid');
-        navbar.classList.remove('navbar-transparent');
+        if (!isSolid) {
+          navbar.classList.add('navbar-solid');
+          navbar.classList.remove('navbar-transparent');
+          isSolid = true;
+        }
       }
       function setTransparent() {
-        navbar.classList.add('navbar-transparent');
-        navbar.classList.remove('navbar-solid');
+        if (isSolid) {
+          navbar.classList.add('navbar-transparent');
+          navbar.classList.remove('navbar-solid');
+          isSolid = false;
+        }
       }
       function updateNavbar() {
         var currentScroll = window.scrollY;
