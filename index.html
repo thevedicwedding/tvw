@@ -103,7 +103,7 @@
 
 
 
-    <header class="site-navbar py-3 fixed-top" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: transparent;">
+    <header class="site-navbar py-3 fixed-top navbar-transparent" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: transparent; z-index: 1030;">
 
       <div class="container-fluid">
         <div class="row align-items-center">
@@ -288,29 +288,33 @@
   <script src="js/jquery.mousewheel.min.js"></script>
 
   <script src="js/main.js"></script>
+  <style>
+    .navbar-transparent {
+      background: rgba(255,255,255,0) !important;
+      box-shadow: none !important;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .navbar-solid {
+      background: #fff !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+  </style>
   <script>
-    // Sticky transparent-to-solid navbar on scroll direction
+    // Sticky transparent-to-solid navbar on scroll direction (robust version)
     (function() {
       var navbar = document.getElementById('main-navbar');
       var lastScroll = window.scrollY;
-      var solidBg = '#fff'; // Change to your theme color if needed
-      var transparentBg = 'rgba(255,255,255,0)';
-      var solidClass = 'navbar-solid';
-      var transparentClass = 'navbar-transparent';
+      var ticking = false;
       function setSolid() {
-        navbar.style.background = solidBg;
-        navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
-        navbar.classList.add(solidClass);
-        navbar.classList.remove(transparentClass);
+        navbar.classList.add('navbar-solid');
+        navbar.classList.remove('navbar-transparent');
       }
       function setTransparent() {
-        navbar.style.background = transparentBg;
-        navbar.style.boxShadow = 'none';
-        navbar.classList.add(transparentClass);
-        navbar.classList.remove(solidClass);
+        navbar.classList.add('navbar-transparent');
+        navbar.classList.remove('navbar-solid');
       }
-      setTransparent();
-      window.addEventListener('scroll', function() {
+      function updateNavbar() {
         var currentScroll = window.scrollY;
         if (currentScroll <= 10) {
           setTransparent();
@@ -322,7 +326,16 @@
           setSolid();
         }
         lastScroll = currentScroll;
+        ticking = false;
+      }
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateNavbar);
+          ticking = true;
+        }
       });
+      // Initial state
+      setTransparent();
     })();
   </script>
   <script>
