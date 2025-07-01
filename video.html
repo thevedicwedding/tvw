@@ -43,7 +43,7 @@
 
 
 
-    <header class="site-navbar py-3 fixed-top navbar-solid" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: #fff; z-index: 1030; width: 100vw; left: 0; right: 0;">
+    <header class="site-navbar py-3 navbar-solid" role="banner" style="position:fixed; top:0; left:0; width:100%; background:#fff; z-index:1000; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-6 col-xl-2" data-aos="fade-down">
@@ -95,14 +95,15 @@
         </div>
       </div>
     </header>
+
     <script>
-      // Always solid navbar, no transparency
-      (function() {
-        var navbar = document.getElementById('main-navbar');
-        navbar.classList.add('navbar-solid');
-        navbar.classList.remove('navbar-transparent');
-        navbar.style.background = '#fff'; // Change to your theme color if needed
-      })();
+      // Adjust body padding-top to navbar height to prevent content overlap
+      document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.querySelector('.site-navbar');
+        if (navbar) {
+          document.body.style.paddingTop = navbar.offsetHeight + 'px';
+        }
+      });
     </script>
 
 
