@@ -103,7 +103,7 @@
 
 
 
-    <header class="site-navbar py-3 fixed-top navbar-transparent" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: transparent; z-index: 1030;">
+    <header class="site-navbar py-3 fixed-top navbar-transparent" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: transparent; z-index: 1030; width: 100vw; left: 0; right: 0;">
 
       <div class="container-fluid">
         <div class="row align-items-center">
@@ -299,6 +299,22 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
       transition: background 0.3s, box-shadow 0.3s;
     }
+    .site-navbar.fixed-top {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      z-index: 1030;
+    }
+    body {
+      padding-top: 80px !important;
+    }
+    @media (max-width: 991.98px) {
+      body {
+        padding-top: 60px !important;
+      }
+    }
   </style>
   <script>
     // Sticky transparent-to-solid navbar on scroll direction (robust version)
@@ -308,18 +324,14 @@
       var ticking = false;
       var isSolid = false;
       function setSolid() {
-        if (!isSolid) {
-          navbar.classList.add('navbar-solid');
-          navbar.classList.remove('navbar-transparent');
-          isSolid = true;
-        }
+        navbar.classList.add('navbar-solid');
+        navbar.classList.remove('navbar-transparent');
+        isSolid = true;
       }
       function setTransparent() {
-        if (isSolid) {
-          navbar.classList.add('navbar-transparent');
-          navbar.classList.remove('navbar-solid');
-          isSolid = false;
-        }
+        navbar.classList.add('navbar-transparent');
+        navbar.classList.remove('navbar-solid');
+        isSolid = false;
       }
       function updateNavbar() {
         var currentScroll = window.scrollY;
