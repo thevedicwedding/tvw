@@ -27,8 +27,21 @@ section h1, section h2, section h3, section h4, section h5, section h6 {
   color: #000 !important;
 }
 
-nav, .site-navbar, .site-navbar .site-logo, .site-navbar .site-navigation .site-menu > li > a, .site-navbar .site-navigation .site-menu .has-children > a, .site-navbar .site-navigation .site-menu .has-children .dropdown a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children .dropdown, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > ul, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children:focus > a, .site-navbar .site-navigation .site-menu .has-children:active > a {
-  color: #000 !important;
+
+/* Main nav and dropdown: black text, red on hover, white background for dropdown */
+.site-navbar .site-navigation .site-menu > li > a,
+.site-navbar .site-navigation .site-menu .has-children > a,
+.site-navbar .site-navigation .site-menu .has-children .dropdown > li > a {
+  color: #111 !important;
+}
+.site-navbar .site-navigation .site-menu > li > a:hover,
+.site-navbar .site-navigation .site-menu > li > a:focus,
+.site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:hover,
+.site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:focus {
+  color: #d32f2f !important;
+}
+.site-navbar .site-navigation .site-menu .has-children .dropdown {
+  background: #fff !important;
 }
 
 .site-menu[data-class="social"] a,
