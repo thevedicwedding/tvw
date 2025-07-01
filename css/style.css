@@ -636,10 +636,18 @@ a {
 
 /* Blocks */
 .site-blocks-cover {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-position: center center; }
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  width: 100vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
   .site-blocks-cover.overlay {
     position: relative; }
     .site-blocks-cover.overlay:before {
@@ -656,10 +664,75 @@ a {
     width: 100%; }
   .site-blocks-cover, .site-blocks-cover .row {
     min-height: 600px;
-    height: calc(100vh - 73px); }
+    height: 100vh;
+    max-height: 100vh;
+  }
   .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover .row {
     min-height: 600px;
-    height: calc(30vh); }
+    height: 30vh;
+    max-height: 30vh;
+  }
+/* Mobile landing image optimization */
+.landing-mobile-img {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .site-blocks-cover, .site-blocks-cover .row {
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+  }
+  .landing-mobile-img {
+    display: block !important;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    background: #000;
+  }
+  .site-blocks-cover .slide-one-item,
+  .site-blocks-cover .owl-carousel,
+  .site-blocks-cover .home-slider {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .landing-mobile-img {
+    display: none !important;
+  }
+  .site-blocks-cover .slide-one-item,
+  .site-blocks-cover .owl-carousel,
+  .site-blocks-cover .home-slider {
+    display: block !important;
+  }
+}
+
+/* Desktop slider image optimization */
+.slide-one-item .owl-item img,
+.slide-one-item .owl-item .slide-img,
+.slide-one-item .slide-img,
+.site-blocks-cover .slide-img {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  min-height: 600px;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block;
+  margin: 0 auto;
+  background: #000;
+}
+
+/* Prevent double scrollbars and unwanted gaps */
+body, html {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
   .site-blocks-cover h2, .site-blocks-cover h3, .site-blocks-cover h4, .site-blocks-cover h5 {
     color: #fff; }
   .site-blocks-cover h1 {
