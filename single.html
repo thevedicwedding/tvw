@@ -297,7 +297,7 @@
               '-webkit-filter': 'none',
               'transition': 'none'
             });
-            $img.off('mouseenter mouseleave');
+            // Do NOT unbind mouse/touch events, so swipe works
           }, 50);
         },
         // Remove grayscale/color hover effect in fullscreen as well
@@ -308,7 +308,7 @@
               '-webkit-filter': 'none',
               'transition': 'none'
             });
-            $('.lg-outer img').off('mouseenter mouseleave');
+            // Do NOT unbind mouse/touch events, so swipe works
           }, 100);
         },
         // Disable right-click in fullscreen
@@ -338,7 +338,7 @@
         '-webkit-filter': 'none',
         'transition': 'none'
       });
-      $('#lightgallery img').off('mouseenter mouseleave');
+      // Do NOT unbind mouse/touch events on #lightgallery img
     });
   </script>
 
