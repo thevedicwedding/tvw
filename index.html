@@ -111,25 +111,29 @@
     </header>
 
 
-    <!-- Mobile Static Image Start -->
-    <div class="site-blocks-cover d-block d-lg-none" id="mobile-landing-image" style="padding:0; background: none; border: none; box-shadow: none; min-height:100vh; height:100vh; width:100vw; position:relative;">
-      <img src="images/mobile-landing.jpg" alt="Mobile Landing" style="width:100vw; height:100vh; object-fit:cover; object-position:center; display:block;">
-    </div>
-    <div class="d-block d-lg-none" style="height:40px;"></div>
-    <!-- Mobile Static Image End -->
 
-    <!-- Image Slider Start -->
-    <div class="site-blocks-cover overlay d-none d-lg-block" data-aos="fade" id="home-slider" style="padding: 0; background: none; border: none; box-shadow: none;">
+
+
+    <!-- Image Slider Start: now visible on all devices -->
+    <div class="site-blocks-cover overlay" data-aos="fade" id="home-slider" style="padding: 0; background: none; border: none; box-shadow: none;">
       <div class="slide-one-item home-slider owl-carousel">
-        <div class="slide-item" style="background-image: url('images/img_1.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-        <div class="slide-item" style="background-image: url('images/img_2.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-        <div class="slide-item" style="background-image: url('images/img_3.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-        <div class="slide-item" style="background-image: url('images/img_4.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-        <div class="slide-item" style="background-image: url('images/img_5.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
+        <div class="slide-item" style="background-image: url('images/img_1.jpg'); min-height: 350px; height: 60vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
+        <div class="slide-item" style="background-image: url('images/img_2.jpg'); min-height: 350px; height: 60vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
+        <div class="slide-item" style="background-image: url('images/img_3.jpg'); min-height: 350px; height: 60vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
+        <div class="slide-item" style="background-image: url('images/img_4.jpg'); min-height: 350px; height: 60vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
+        <div class="slide-item" style="background-image: url('images/img_5.jpg'); min-height: 350px; height: 60vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
       </div>
     </div>
     <!-- Image Slider End -->
-    <div class="slider-spacer d-none d-lg-block" style="height: 40px; width: 100%;"></div>
+
+    <!-- Add space, H1 and description below slider -->
+    <div class="slider-spacer" style="height: 32px; width: 100%;"></div>
+    <div class="container text-center mb-4">
+      <h1 class="display-4" style="color: #d32f2f; margin-bottom: 18px;">The Vedic Wedding</h1>
+      <p class="lead" style="max-width: 600px; margin: 0 auto; color: #444;">
+        Capturing timeless moments, traditions, and emotions. Explore our gallery of fashion, food, products, pre-wedding, wedding, and baby photography.
+      </p>
+    </div>
 
 
 
@@ -227,6 +231,19 @@
       margin: 0 auto;
       font-weight: 500;
       letter-spacing: 0.01em;
+    }
+    /* Responsive slider height and text for mobile */
+    @media (max-width: 991.98px) {
+      .site-blocks-cover .slide-item {
+        min-height: 180px !important;
+        height: 36vh !important;
+      }
+      .display-4 {
+        font-size: 2rem;
+      }
+      .slider-spacer {
+        height: 16px !important;
+      }
     }
   </style>
   <script src="js/jquery-3.3.1.min.js"></script>
