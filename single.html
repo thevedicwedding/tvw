@@ -250,123 +250,110 @@
 
 
     <footer class="site-footer-custom redesigned-footer">
-      <div class="footer-main">
-        <div class="footer-section footer-socials">
-          <h5>Socials</h5>
-          <ul class="footer-social-list">
-            <li><a href="https://www.facebook.com/thevedicwedding" target="_blank" rel="noopener"><span class="icon-facebook"></span> Facebook</a></li>
-            <li><a href="https://www.instagram.com/thevedicwedding" target="_blank" rel="noopener"><span class="icon-instagram"></span> Instagram</a></li>
-            <li><a href="https://www.youtube.com/@thevedicwedding" target="_blank" rel="noopener"><span class="icon-youtube-play"></span> YouTube</a></li>
-            <li><a href="https://www.pinterest.com/thevedicwedding" target="_blank" rel="noopener"><span class="icon-pinterest"></span> Pinterest</a></li>
-            <li><a href="https://www.behance.net/thevedicwedding" target="_blank" rel="noopener"><span class="icon-behance"></span> Behance</a></li>
-          </ul>
-        </div>
-        <div class="footer-section footer-sitemap">
-          <h5>Sitemap</h5>
-          <ul class="footer-sitemap-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="single.html">Gallery</a></li>
-            <li><a href="video.html">Video</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section footer-contact">
-          <h5>Contact</h5>
-          <ul class="footer-contact-list">
-            <li><a href="mailto:thevedicwedding@gmail.com">thevedicwedding@gmail.com</a></li>
-            <li><a href="tel:+919874567890">+91 98745 67890</a></li>
-          </ul>
+      <div class="container-fluid">
+        <div class="row align-items-center py-3">
+          <div class="col-12 col-md-4 text-center text-md-left mb-2 mb-md-0">
+            <span class="footer-section-title">Socials</span>
+            <span class="footer-social-icons ml-2">
+              <a href="https://www.facebook.com/thevedicwedding" target="_blank" rel="noopener" aria-label="Facebook"><span class="icon-facebook"></span></a>
+              <a href="https://www.pinterest.com/thevedicwedding" target="_blank" rel="noopener" aria-label="Pinterest"><span class="icon-pinterest"></span></a>
+              <a href="https://www.behance.net/thevedicwedding" target="_blank" rel="noopener" aria-label="Behance"><span class="icon-behance"></span></a>
+              <a href="https://www.instagram.com/thevedicwedding" target="_blank" rel="noopener" aria-label="Instagram"><span class="icon-instagram"></span></a>
+              <a href="https://www.youtube.com/@thevedicwedding" target="_blank" rel="noopener" aria-label="YouTube"><span class="icon-youtube-play"></span></a>
+            </span>
+          </div>
+          <div class="col-12 col-md-4 text-center mb-2 mb-md-0">
+            <span class="footer-section-title">Sitemap</span>
+            <span class="footer-links ml-2">
+              <a href="index.html">Home</a> |
+              <a href="single.html">Gallery</a> |
+              <a href="video.html">Video</a> |
+              <a href="about.html">About</a> |
+              <a href="contact.html">Contact</a>
+            </span>
+          </div>
+          <div class="col-12 col-md-4 text-center text-md-right">
+            <span class="footer-section-title">Contact</span>
+            <span class="footer-contact ml-2">
+              <a href="mailto:info@thevedicwedding.com">info@thevedicwedding.com</a>
+            </span>
+            <div class="footer-copyright mt-2">© 2025 Pallab Photography</div>
+          </div>
         </div>
       </div>
-      <div class="footer-content copyright">© 2025 Pallab Photography</div>
     </footer>
+
     <style>
-      .site-footer-custom {
+      .site-footer-custom.redesigned-footer {
         background: #D4C9BE;
         color: #111;
-        text-align: center;
-        padding: 32px 0 0 0;
-        font-size: 1.08rem;
         font-family: 'Josefin Sans', Arial, sans-serif;
         border-top: none;
         margin-top: 40px;
         letter-spacing: 0.01em;
         box-shadow: 0 -1px 6px rgba(0,0,0,0.03);
-      }
-      .site-footer-custom .footer-main {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 60px;
-        max-width: 1100px;
-        margin: 0 auto 0 auto;
-        flex-wrap: wrap;
-        padding-bottom: 10px;
-      }
-      .site-footer-custom .footer-section {
-        min-width: 180px;
-        margin-bottom: 18px;
-      }
-      .site-footer-custom .footer-section h5 {
         font-size: 1.08rem;
+        padding: 0;
+      }
+      .site-footer-custom .footer-section-title {
         font-weight: 700;
-        margin-bottom: 10px;
-        color: #b71c1c;
+        color: #d32f2f;
+        font-size: 1.1rem;
+        margin-right: 8px;
         letter-spacing: 0.02em;
       }
-      .site-footer-custom .footer-social-list,
-      .site-footer-custom .footer-sitemap-list,
-      .site-footer-custom .footer-contact-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .site-footer-custom .footer-social-list li,
-      .site-footer-custom .footer-sitemap-list li,
-      .site-footer-custom .footer-contact-list li {
-        margin-bottom: 7px;
-      }
-      .site-footer-custom .footer-social-list a,
-      .site-footer-custom .footer-sitemap-list a,
-      .site-footer-custom .footer-contact-list a {
-        color: #111;
-        text-decoration: none;
+      .site-footer-custom .footer-social-icons a {
+        color: #d32f2f;
+        font-size: 1.3rem;
+        margin: 0 6px;
+        display: inline-block;
         transition: color 0.2s;
       }
-      .site-footer-custom .footer-social-list a:hover,
-      .site-footer-custom .footer-sitemap-list a:hover,
-      .site-footer-custom .footer-contact-list a:hover {
-        color: #d32f2f;
+      .site-footer-custom .footer-social-icons a:hover {
+        color: #111;
       }
-      .site-footer-custom .footer-social-list .icon-facebook,
-      .site-footer-custom .footer-social-list .icon-instagram,
-      .site-footer-custom .footer-social-list .icon-youtube-play,
-      .site-footer-custom .footer-social-list .icon-pinterest,
-      .site-footer-custom .footer-social-list .icon-behance {
-        font-size: 1.1em;
-        margin-right: 7px;
-        vertical-align: middle;
-      }
-      .site-footer-custom .copyright {
-        border-top: 1px solid #c2b6a8;
-        margin-top: 18px;
-        padding: 12px 0 10px 0;
-        font-size: 1.01rem;
-        color: #444;
+      .site-footer-custom .footer-links a {
+        color: #111;
+        text-decoration: none;
+        margin: 0 2px;
         font-weight: 500;
-        background: none;
+        transition: color 0.2s;
+      }
+      .site-footer-custom .footer-links a:hover {
+        color: #d32f2f;
+        text-decoration: underline;
+      }
+      .site-footer-custom .footer-contact a {
+        color: #d32f2f;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .site-footer-custom .footer-contact a:hover {
+        color: #111;
+        text-decoration: underline;
+      }
+      .site-footer-custom .footer-copyright {
+        font-size: 0.98rem;
+        color: #888;
+        margin-top: 4px;
       }
       @media (max-width: 991.98px) {
-        .site-footer-custom .footer-main {
-          flex-direction: column;
-          align-items: center;
-          gap: 28px;
+        .site-footer-custom .footer-section-title {
+          display: block;
+          margin-bottom: 4px;
         }
-        .site-footer-custom .footer-section {
-          min-width: 0;
-          width: 100%;
-          text-align: center;
+        .site-footer-custom .footer-social-icons,
+        .site-footer-custom .footer-links,
+        .site-footer-custom .footer-contact {
+          display: block;
+          margin: 0 auto 8px auto;
+        }
+        .site-footer-custom .footer-copyright {
+          margin-top: 8px;
+        }
+        .site-footer-custom .row > div {
+          margin-bottom: 10px;
         }
       }
     </style>
