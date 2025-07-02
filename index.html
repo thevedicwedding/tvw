@@ -115,7 +115,7 @@
 
 
     <!-- Image Slider Start: now visible on all devices -->
-    <div class="site-blocks-cover overlay" data-aos="fade" id="home-slider" style="padding: 0; background: #000; border: none; box-shadow: none; min-height: 100vh; height: 100vh; width: 100vw; position: relative;">
+    <div class="site-blocks-cover overlay" data-aos="fade" id="home-slider" style="padding: 0; background: #000; border: none; box-shadow: none; min-height: 350px; height: 38vh; max-height: 420px; width: 100vw; position: relative;">
       <div class="slide-one-item home-slider owl-carousel">
         <div class="slide-item" style="background-image: url('images/img_1.jpg'); min-height: 350px; height: 38vh; max-height: 420px; width: 100vw; background-size: cover; background-position: center; background-color: #000; border: none; box-shadow: none; display: block;"></div>
         <div class="slide-item" style="background-image: url('images/img_2.jpg'); min-height: 350px; height: 38vh; max-height: 420px; width: 100vw; background-size: cover; background-position: center; background-color: #000; border: none; box-shadow: none; display: block;"></div>
@@ -235,19 +235,21 @@
     /* Responsive slider height and text for mobile */
     @media (max-width: 991.98px) {
       .site-blocks-cover {
-        min-height: unset !important;
-        height: auto !important;
+        min-height: 350px !important;
+        height: 38vh !important;
+        max-height: 420px !important;
         width: 100vw !important;
         padding: 0 !important;
         margin: 0 !important;
         background: #000 !important;
       }
       .slide-one-item {
-        height: auto !important;
-        min-height: unset !important;
+        min-height: 350px !important;
+        height: 38vh !important;
+        max-height: 420px !important;
       }
       .slide-item {
-        min-height: 220px !important;
+        min-height: 350px !important;
         height: 38vh !important;
         max-height: 420px !important;
         width: 100vw !important;
