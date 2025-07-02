@@ -251,18 +251,18 @@
     <footer class="site-footer-custom">
       <div class="footer-main">
         <div class="footer-section footer-socials">
-          <span class="footer-label">Socials</span>
-          <div class="footer-icons">
-            <a href="https://www.facebook.com/thevedicwedding" target="_blank" rel="noopener" aria-label="Facebook"><span class="icon-facebook"></span></a>
-            <a href="https://www.pinterest.com/thevedicwedding" target="_blank" rel="noopener" aria-label="Pinterest"><span class="icon-pinterest"></span></a>
-            <a href="https://www.behance.net/thevedicwedding" target="_blank" rel="noopener" aria-label="Behance"><span class="icon-behance"></span></a>
-            <a href="https://www.instagram.com/thevedicwedding" target="_blank" rel="noopener" aria-label="Instagram"><span class="icon-instagram"></span></a>
-            <a href="https://www.youtube.com/@thevedicwedding" target="_blank" rel="noopener" aria-label="YouTube"><span class="icon-youtube-play"></span></a>
-          </div>
+          <h5>Socials</h5>
+          <ul class="footer-social-list">
+            <li><a href="https://www.facebook.com/thevedicwedding" target="_blank" rel="noopener"><span class="icon-facebook"></span> Facebook</a></li>
+            <li><a href="https://www.instagram.com/thevedicwedding" target="_blank" rel="noopener"><span class="icon-instagram"></span> Instagram</a></li>
+            <li><a href="https://www.youtube.com/@thevedicwedding" target="_blank" rel="noopener"><span class="icon-youtube-play"></span> YouTube</a></li>
+            <li><a href="https://www.pinterest.com/thevedicwedding" target="_blank" rel="noopener"><span class="icon-pinterest"></span> Pinterest</a></li>
+            <li><a href="https://www.behance.net/thevedicwedding" target="_blank" rel="noopener"><span class="icon-behance"></span> Behance</a></li>
+          </ul>
         </div>
         <div class="footer-section footer-sitemap">
-          <span class="footer-label">Sitemap</span>
-          <ul class="footer-links">
+          <h5>Sitemap</h5>
+          <ul class="footer-sitemap-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="single.html">Gallery</a></li>
             <li><a href="video.html">Video</a></li>
@@ -271,104 +271,102 @@
           </ul>
         </div>
         <div class="footer-section footer-contact">
-          <span class="footer-label">Contact</span>
-          <ul class="footer-links">
+          <h5>Contact</h5>
+          <ul class="footer-contact-list">
             <li><a href="mailto:thevedicwedding@gmail.com">thevedicwedding@gmail.com</a></li>
-            <li><a href="tel:+919874747474">+91 98747 47474</a></li>
+            <li><a href="tel:+919874567890">+91 98745 67890</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">© 2025 Pallab Photography</div>
+      <div class="footer-content copyright">© 2025 Pallab Photography</div>
     </footer>
 
     <style>
       .site-footer-custom {
         background: #D4C9BE;
         color: #111;
+        text-align: center;
+        padding: 32px 0 0 0;
+        font-size: 1.08rem;
+        font-family: 'Josefin Sans', Arial, sans-serif;
         border-top: none;
         margin-top: 40px;
+        letter-spacing: 0.01em;
         box-shadow: 0 -1px 6px rgba(0,0,0,0.03);
-        font-family: 'Josefin Sans', Arial, sans-serif;
-        padding: 0;
       }
-      .footer-main {
+      .site-footer-custom .footer-main {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 28px 24px 10px 24px;
+        gap: 60px;
+        max-width: 1100px;
+        margin: 0 auto 0 auto;
         flex-wrap: wrap;
+        padding-bottom: 10px;
       }
-      .footer-section {
-        flex: 1 1 200px;
+      .site-footer-custom .footer-section {
         min-width: 180px;
         margin-bottom: 18px;
-        text-align: left;
       }
-      .footer-label {
-        display: block;
-        font-weight: 700;
+      .site-footer-custom .footer-section h5 {
         font-size: 1.08rem;
+        font-weight: 700;
         margin-bottom: 10px;
-        color: #b03a2e;
-        letter-spacing: 0.01em;
+        color: #b71c1c;
+        letter-spacing: 0.02em;
       }
-      .footer-icons a {
-        color: #b03a2e;
-        font-size: 1.3rem;
-        margin-right: 12px;
-        transition: color 0.2s;
-      }
-      .footer-icons a:last-child {
-        margin-right: 0;
-      }
-      .footer-icons a:hover {
-        color: #d32f2f;
-      }
-      .footer-links {
+      .site-footer-custom .footer-social-list,
+      .site-footer-custom .footer-sitemap-list,
+      .site-footer-custom .footer-contact-list {
         list-style: none;
         padding: 0;
         margin: 0;
       }
-      .footer-links li {
+      .site-footer-custom .footer-social-list li,
+      .site-footer-custom .footer-sitemap-list li,
+      .site-footer-custom .footer-contact-list li {
         margin-bottom: 7px;
       }
-      .footer-links a {
+      .site-footer-custom .footer-social-list a,
+      .site-footer-custom .footer-sitemap-list a,
+      .site-footer-custom .footer-contact-list a {
         color: #111;
         text-decoration: none;
         transition: color 0.2s;
-        font-size: 1.04rem;
       }
-      .footer-links a:hover {
-        color: #b03a2e;
-        text-decoration: underline;
+      .site-footer-custom .footer-social-list a:hover,
+      .site-footer-custom .footer-sitemap-list a:hover,
+      .site-footer-custom .footer-contact-list a:hover {
+        color: #d32f2f;
       }
-      .footer-bottom {
-        text-align: center;
-        padding: 10px 0 14px 0;
-        font-size: 1.08rem;
+      .site-footer-custom .footer-social-list .icon-facebook,
+      .site-footer-custom .footer-social-list .icon-instagram,
+      .site-footer-custom .footer-social-list .icon-youtube-play,
+      .site-footer-custom .footer-social-list .icon-pinterest,
+      .site-footer-custom .footer-social-list .icon-behance {
+        font-size: 1.1em;
+        margin-right: 7px;
+        vertical-align: middle;
+      }
+      .site-footer-custom .copyright {
+        border-top: 1px solid #c2b6a8;
+        margin-top: 18px;
+        padding: 12px 0 10px 0;
+        font-size: 1.01rem;
+        color: #444;
         font-weight: 500;
-        letter-spacing: 0.01em;
-        border-top: 1px solid #e2d6c7;
-        background: #D4C9BE;
+        background: none;
       }
       @media (max-width: 991.98px) {
-        .footer-main {
+        .site-footer-custom .footer-main {
           flex-direction: column;
-          align-items: stretch;
-          padding: 22px 10px 6px 10px;
+          align-items: center;
+          gap: 28px;
         }
-        .footer-section {
+        .site-footer-custom .footer-section {
           min-width: 0;
-          margin-bottom: 16px;
+          width: 100%;
           text-align: center;
-        }
-        .footer-label {
-          margin-bottom: 7px;
-        }
-        .footer-bottom {
-          padding: 10px 0 12px 0;
         }
       }
     </style>
