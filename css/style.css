@@ -644,6 +644,7 @@ a {
           padding-left: 15px !important; }
 
 /* Blocks */
+/* Remove border-radius and box-shadow from slideshow and slides */
 .site-blocks-cover {
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -656,6 +657,9 @@ a {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
 }
   .site-blocks-cover.overlay {
     position: relative; }
@@ -713,6 +717,9 @@ a {
     background-repeat: no-repeat !important;
     background-color: #000 !important;
     display: block !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
   }
 }
 @media (min-width: 992px) {
