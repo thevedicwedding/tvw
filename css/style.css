@@ -687,25 +687,17 @@ a {
 }
 @media (max-width: 991.98px) {
   .site-blocks-cover, .site-blocks-cover .row {
-    min-height: 100vh;
-    height: 100vh;
-    max-height: 100vh;
+    min-height: unset !important;
+    height: auto !important;
+    max-height: unset !important;
   }
   .landing-mobile-img {
-    display: block !important;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center center;
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
-    background: #000;
+    display: none !important;
   }
   .site-blocks-cover .slide-one-item,
   .site-blocks-cover .owl-carousel,
   .site-blocks-cover .home-slider {
-    display: none !important;
+    display: block !important;
   }
 }
 @media (min-width: 992px) {
