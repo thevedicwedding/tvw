@@ -61,8 +61,8 @@
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active navbar-parallax" data-stellar-background-ratio="0.3" style="background:rgba(211,47,47,0.08);"><a href="index.html">Home</a></li>
-                <li class="has-children navbar-parallax" data-stellar-background-ratio="0.3" style="background:rgba(211,47,47,0.08);">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li class="has-children">
                   <a href="single.html">Gallery</a>
                   <ul class="dropdown">
                     <li><a href="#">Fashion</a></li>
@@ -73,9 +73,9 @@
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
-                <li class="navbar-parallax" data-stellar-background-ratio="0.3" style="background:rgba(211,47,47,0.08);"><a href="video.html">Video</a></li>
-                <li class="navbar-parallax" data-stellar-background-ratio="0.3" style="background:rgba(211,47,47,0.08);"><a href="about.html">About</a></li>
-                <li class="navbar-parallax" data-stellar-background-ratio="0.3" style="background:rgba(211,47,47,0.08);"><a href="contact.html">Contact</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -410,10 +410,6 @@
           responsive: true
         });
       }
-      // Ensure Stellar.js works for navbar items
-      $('.navbar-parallax').each(function(){
-        $(this).attr('data-stellar-background-ratio', '0.3');
-      });
     });
   </script>
   <style>
