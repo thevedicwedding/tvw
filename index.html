@@ -29,6 +29,47 @@
     h2 {
       color: #d32f2f !important;
     }
+    /* Mobile gallery parallax optimization */
+    @media (max-width: 991.98px) {
+      .gallery-parallax {
+        min-height: 260px !important;
+        height: auto !important;
+        margin-bottom: 18px !important;
+        background: rgba(211,47,47,0.08) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+        padding: 0 !important;
+      }
+      .image-wrap-2 {
+        border-radius: 12px !important;
+        overflow: hidden !important;
+      }
+      .image-info {
+        padding: 16px 8px !important;
+        text-align: center !important;
+      }
+      .image-info h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 10px !important;
+      }
+      .image-info a {
+        font-size: 1rem !important;
+        padding: 6px 18px !important;
+      }
+      .img-fluid {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 0 0 12px 12px !important;
+      }
+      .container-fluid {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+      }
+      .row {
+        margin-left: -8px !important;
+        margin-right: -8px !important;
+      }
+    }
   </style>
 
 </head>
@@ -232,9 +273,9 @@
           <div class="col-12 col-md-4 text-center text-md-right">
             <span class="footer-section-title">Contact</span>
             <span class="footer-contact ml-2">
-              <a href="mailto:info@thevedicwedding.com">info@thevedicwedding.com</a>
+              <a href="mailto:info@thevedicwedding.com">thevedicwedding@gmail.com</a>
             </span>
-            <div class="footer-copyright mt-2">© 2025 Pallab Photography</div>
+            <div class="footer-copyright mt-2">© 2025 the vedic wedding</div>
           </div>
         </div>
       </div>
@@ -326,23 +367,23 @@
     /* Responsive slider height and text for mobile */
     @media (max-width: 991.98px) {
       .site-blocks-cover {
-        min-height: 350px !important;
-        height: 38vh !important;
-        max-height: 420px !important;
+        min-height: 220px !important;
+        height: 28vh !important;
+        max-height: 320px !important;
         width: 100vw !important;
         padding: 0 !important;
         margin: 0 !important;
         background: #000 !important;
       }
       .slide-one-item {
-        min-height: 350px !important;
-        height: 38vh !important;
-        max-height: 420px !important;
+        min-height: 220px !important;
+        height: 28vh !important;
+        max-height: 320px !important;
       }
       .slide-item {
-        min-height: 350px !important;
-        height: 38vh !important;
-        max-height: 420px !important;
+        min-height: 220px !important;
+        height: 28vh !important;
+        max-height: 320px !important;
         width: 100vw !important;
         background-size: cover !important;
         background-position: center !important;
@@ -350,15 +391,27 @@
         background-color: #000 !important;
         display: block !important;
       }
+      .parallax-h1-section {
+        min-height: 160px !important;
+        padding: 18px 0 !important;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
       .display-4 {
-        font-size: 2rem;
-        margin-top: 70px !important;
+        font-size: 1.3rem !important;
+        margin-top: 32px !important;
+        margin-bottom: 10px !important;
+      }
+      .lead {
+        font-size: 1rem !important;
+        padding: 0 8px !important;
       }
       .slider-spacer {
-        height: 16px !important;
+        height: 10px !important;
       }
       body {
-        padding-top: 60px !important;
+        padding-top: 56px !important;
       }
     }
     @media (min-width: 992px) {
@@ -396,22 +449,14 @@
 
   <script src="js/main.js"></script>
   <script>
-    // Initialize Stellar.js for parallax effect on gallery and navbar
+    // Initialize Stellar.js for parallax effect
     $(function(){
       if(typeof $.stellar === 'function') {
-        // Ensure all gallery and navbar parallax elements have correct attributes
-        $('.gallery-parallax, .navbar-parallax').each(function(){
-          $(this).attr('data-stellar-background-ratio', '0.3');
+        $.stellar({
+          horizontalScrolling: false,
+          verticalScrolling: true,
+          responsive: true
         });
-        // Force Stellar.js to refresh after DOM ready
-        setTimeout(function(){
-          $.stellar({
-            horizontalScrolling: false,
-            verticalScrolling: true,
-            responsive: true,
-            positionProperty: 'transform'
-          });
-        }, 300);
       }
     });
   </script>
