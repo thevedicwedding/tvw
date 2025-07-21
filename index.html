@@ -126,7 +126,14 @@
     </div>
     <!-- Image Slider End -->
 
-    <!-- Add space, H1 and description below slider -->
+    <!-- Parallax Section Start -->
+    <div class="parallax-section" data-stellar-background-ratio="0.5" style="background-image: url('images/img_2.jpg'); min-height: 300px; background-attachment: fixed; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+      <div style="background: rgba(0,0,0,0.4); padding: 40px 20px; border-radius: 8px; text-align: center;">
+        <h2 style="color: #fff; font-size: 2.5rem; margin-bottom: 12px;">Experience the Parallax Effect</h2>
+        <p style="color: #fff; font-size: 1.2rem;">Scroll down to see the background move at a different speed than the foreground content.</p>
+      </div>
+    </div>
+    <!-- Parallax Section End -->
     <div class="slider-spacer" style="height: 32px; width: 100%;"></div>
     <div class="container text-center mb-4">
       <h1 class="display-4" style="color: #d32f2f; margin-bottom: 18px;">The Vedic Wedding</h1>
@@ -396,6 +403,18 @@
   <script src="js/jquery.mousewheel.min.js"></script>
 
   <script src="js/main.js"></script>
+  <script>
+    // Initialize Stellar.js for parallax effect
+    $(function(){
+      if(typeof $.stellar === 'function') {
+        $.stellar({
+          horizontalScrolling: false,
+          verticalScrolling: true,
+          responsive: true
+        });
+      }
+    });
+  </script>
   <style>
     .navbar-solid {
       background: #fff !important;
