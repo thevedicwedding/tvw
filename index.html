@@ -111,97 +111,95 @@
     </header>
 
 
-    <!-- Mobile Static Image Start -->
-    <div class="site-blocks-cover d-block d-lg-none" id="mobile-landing-image" style="padding:0; background: none; border: none; box-shadow: none; min-height:100vh; height:100vh; width:100vw; position:relative;">
-      <img src="images/mobile-landing.jpg" alt="Mobile Landing" style="width:100vw; height:100vh; object-fit:cover; object-position:center; display:block;">
-    </div>
-    <div class="d-block d-lg-none" style="height:40px;"></div>
-    <!-- Mobile Static Image End -->
 
-
-    <!-- Parallax Slider Section -->
-    <section id="parallax-slider" style="position:relative;">
-      <div class="site-blocks-cover overlay d-none d-lg-block" data-aos="fade" id="home-slider" style="padding: 0; background: none; border: none; box-shadow: none;">
-        <div class="slide-one-item home-slider owl-carousel">
-          <div class="slide-item" style="background-image: url('images/img_1.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-          <div class="slide-item" style="background-image: url('images/img_2.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-          <div class="slide-item" style="background-image: url('images/img_3.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-          <div class="slide-item" style="background-image: url('images/img_4.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-          <div class="slide-item" style="background-image: url('images/img_5.jpg'); min-height: 650px; height: 65vh; background-size: cover; background-position: center; border: none; box-shadow: none;"></div>
-        </div>
-      </div>
-      <div class="slider-spacer d-none d-lg-block" style="height: 40px; width: 100%;"></div>
-    </section>
-
-    <!-- Parallax Text Section -->
-    <section id="parallax-text" style="background:#fff;position:relative;z-index:2;">
-      <div class="container-fluid py-5" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <h2 class="display-4" style="color:#d32f2f;font-weight:700;">Welcome to Pallab Photography</h2>
-            <p style="font-size:1.25rem;color:#444;max-width:700px;margin:0 auto;">Capturing moments, telling stories. Explore our gallery and discover the artistry behind every frame.</p>
-          </div>
-        </div>
+    <!-- Lydia-style Hero Section -->
+    <section class="lydia-hero" style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;background:url('images/img_1.jpg') center center/cover no-repeat;">
+      <div class="lydia-hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);"></div>
+      <div class="lydia-hero-content" style="position:relative;z-index:2;text-align:center;color:#fff;max-width:700px;margin:0 auto;">
+        <h1 style="font-size:3.2rem;font-weight:700;letter-spacing:0.04em;">Pallab Photography</h1>
+        <p style="font-size:1.35rem;margin:1.5rem 0 2.5rem 0;">Capturing Life's Beautiful Moments</p>
+        <a href="#gallery" class="btn btn-lg" style="background:#d32f2f;color:#fff;font-weight:600;padding:16px 38px;border-radius:6px;font-size:1.15rem;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.12);">View Gallery</a>
       </div>
     </section>
 
-    <!-- Parallax Image Sections -->
-    <section id="parallax-images">
-      <div class="parallax-image" style="background-image:url('images/img_1.jpg');height:400px;background-attachment:fixed;background-size:cover;background-position:center;position:relative;"></div>
-      <div class="container-fluid py-5" data-aos="fade-up">
-        <div class="row justify-content-center">
+    <!-- Lydia-style Gallery Grid -->
+    <section id="gallery" class="lydia-gallery-section" style="background:#fff;padding:80px 0 60px 0;">
+      <div class="container-fluid">
+        <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center">
-            <h3 style="color:#d32f2f;font-weight:600;">Fashion</h3>
-            <p style="color:#444;">Experience the elegance and creativity of our fashion shoots.</p>
+            <h2 style="font-size:2.4rem;font-weight:700;color:#d32f2f;letter-spacing:0.02em;">Featured Works</h2>
+            <p style="font-size:1.18rem;color:#444;max-width:600px;margin:0 auto;">Explore our latest photography projects and creative highlights.</p>
           </div>
         </div>
-      </div>
-      <div class="parallax-image" style="background-image:url('images/img_2.jpg');height:400px;background-attachment:fixed;background-size:cover;background-position:center;position:relative;"></div>
-      <div class="container-fluid py-5" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <h3 style="color:#d32f2f;font-weight:600;">Food</h3>
-            <p style="color:#444;">Delicious moments captured with artistry and passion.</p>
+        <div class="row lydia-gallery-grid" style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="lydia-gallery-item" style="position:relative;overflow:hidden;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+              <img src="images/img_1.jpg" alt="Fashion" class="img-fluid" style="transition:transform 0.4s;">
+              <div class="lydia-gallery-hover" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(211,47,47,0.82);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;font-size:1.3rem;font-weight:600;">
+                Fashion
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="parallax-image" style="background-image:url('images/img_3.jpg');height:400px;background-attachment:fixed;background-size:cover;background-position:center;position:relative;"></div>
-      <div class="container-fluid py-5" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <h3 style="color:#d32f2f;font-weight:600;">Product</h3>
-            <p style="color:#444;">Showcasing products with style and clarity.</p>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="lydia-gallery-item" style="position:relative;overflow:hidden;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+              <img src="images/img_2.jpg" alt="Food" class="img-fluid" style="transition:transform 0.4s;">
+              <div class="lydia-gallery-hover" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(211,47,47,0.82);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;font-size:1.3rem;font-weight:600;">
+                Food
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="parallax-image" style="background-image:url('images/img_4.jpg');height:400px;background-attachment:fixed;background-size:cover;background-position:center;position:relative;"></div>
-      <div class="container-fluid py-5" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <h3 style="color:#d32f2f;font-weight:600;">Pre Wedding</h3>
-            <p style="color:#444;">Romantic stories before the big day, beautifully told.</p>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="lydia-gallery-item" style="position:relative;overflow:hidden;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+              <img src="images/img_3.jpg" alt="Product" class="img-fluid" style="transition:transform 0.4s;">
+              <div class="lydia-gallery-hover" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(211,47,47,0.82);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;font-size:1.3rem;font-weight:600;">
+                Product
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="parallax-image" style="background-image:url('images/img_5.jpg');height:400px;background-attachment:fixed;background-size:cover;background-position:center;position:relative;"></div>
-      <div class="container-fluid py-5" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <h3 style="color:#d32f2f;font-weight:600;">Wedding</h3>
-            <p style="color:#444;">Cherishing the magic and emotion of every wedding.</p>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="lydia-gallery-item" style="position:relative;overflow:hidden;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+              <img src="images/img_4.jpg" alt="Pre Wedding" class="img-fluid" style="transition:transform 0.4s;">
+              <div class="lydia-gallery-hover" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(211,47,47,0.82);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;font-size:1.3rem;font-weight:600;">
+                Pre Wedding
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="parallax-image" style="background-image:url('images/img_6.jpg');height:400px;background-attachment:fixed;background-size:cover;background-position:center;position:relative;"></div>
-      <div class="container-fluid py-5" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <h3 style="color:#d32f2f;font-weight:600;">Baby</h3>
-            <p style="color:#444;">Capturing the innocence and joy of childhood.</p>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="lydia-gallery-item" style="position:relative;overflow:hidden;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+              <img src="images/img_5.jpg" alt="Wedding" class="img-fluid" style="transition:transform 0.4s;">
+              <div class="lydia-gallery-hover" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(211,47,47,0.82);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;font-size:1.3rem;font-weight:600;">
+                Wedding
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="lydia-gallery-item" style="position:relative;overflow:hidden;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+              <img src="images/img_6.jpg" alt="Baby" class="img-fluid" style="transition:transform 0.4s;">
+              <div class="lydia-gallery-hover" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(211,47,47,0.82);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;font-size:1.3rem;font-weight:600;">
+                Baby
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <style>
+      .lydia-gallery-item:hover img {
+        transform: scale(1.08);
+      }
+      .lydia-gallery-item:hover .lydia-gallery-hover {
+        opacity: 1;
+      }
+      .lydia-gallery-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .lydia-gallery-hover {
+        cursor: pointer;
+      }
+    </style>
 
 
 
