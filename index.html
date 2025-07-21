@@ -396,14 +396,22 @@
 
   <script src="js/main.js"></script>
   <script>
-    // Initialize Stellar.js for parallax effect
+    // Initialize Stellar.js for parallax effect on gallery and navbar
     $(function(){
       if(typeof $.stellar === 'function') {
-        $.stellar({
-          horizontalScrolling: false,
-          verticalScrolling: true,
-          responsive: true
+        // Ensure all gallery and navbar parallax elements have correct attributes
+        $('.gallery-parallax, .navbar-parallax').each(function(){
+          $(this).attr('data-stellar-background-ratio', '0.3');
         });
+        // Force Stellar.js to refresh after DOM ready
+        setTimeout(function(){
+          $.stellar({
+            horizontalScrolling: false,
+            verticalScrolling: true,
+            responsive: true,
+            positionProperty: 'transform'
+          });
+        }, 300);
       }
     });
   </script>
