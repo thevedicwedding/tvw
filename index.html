@@ -139,10 +139,6 @@
     </section>
     <!-- End Custom Strip Section -->
   </div>
-    
-
-    
-    
   </div>
 
 
@@ -154,67 +150,71 @@
       margin: 0;
       padding: 0;
       display: flex;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
     }
     .custom-strip-inner {
       width: 100vw;
-      max-width: 1400px;
+      max-width: 100vw;
       margin: 0 auto;
-      padding: 32px 0;
+      padding: 0;
       display: flex;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
+      height: 100vh;
     }
     .custom-strip-slideshow {
-      width: 90vw;
-      max-width: 900px;
+      width: 100vw;
+      height: 100vh;
+      max-width: 100vw;
       margin: 0 auto;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
     }
     .custom-slide {
       display: flex !important;
       align-items: center;
       justify-content: center;
-      height: 400px;
+      height: 100vh;
+      width: 100vw;
       background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      border-radius: 0;
+      box-shadow: none;
       overflow: hidden;
     }
     .custom-slide img {
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
-      border-radius: 16px;
+      border-radius: 0;
       display: block;
     }
     @media (max-width: 991.98px) {
+      .custom-strip-section {
+        min-height: unset;
+      }
       .custom-strip-inner {
         padding: 12px 0;
+        height: auto;
       }
       .custom-strip-slideshow {
         width: 98vw;
         max-width: 98vw;
+        height: 220px;
       }
       .custom-slide {
         height: 220px;
+        width: 98vw;
         border-radius: 10px;
       }
       .custom-slide img {
         border-radius: 10px;
-      }
-    }
-    /* Desktop strip section height */
-    @media (min-width: 992px) {
-      .strip-section .strip-inner {
-        min-height: 700px !important;
-      }
-      .strip-section .strip-text,
-      .strip-section .strip-image {
-        height: 700px !important;
-      }
-      .strip-section img {
-        max-height: 600px !important;
+        height: 220px;
+        width: 98vw;
       }
     }
     .site-footer-custom.redesigned-footer {
@@ -222,11 +222,13 @@
       color: #111;
       font-family: 'Josefin Sans', Arial, sans-serif;
       border-top: none;
-      margin-top: 40px;
+      margin-top: 0;
       letter-spacing: 0.01em;
       box-shadow: 0 -1px 6px rgba(0,0,0,0.03);
       font-size: 1.08rem;
       padding: 0;
+      position: relative;
+      z-index: 2;
     }
     .site-footer-custom .footer-section-title {
       font-weight: 700;
@@ -287,6 +289,9 @@
       }
       .site-footer-custom .row > div {
         margin-bottom: 10px;
+      }
+      .site-footer-custom.redesigned-footer {
+        margin-top: 0;
       }
     }
   </style>
