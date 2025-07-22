@@ -1063,10 +1063,8 @@ body, html {
         opacity: .2; }
 
 .slide-one-item.home-slider .owl-nav {
-  position: absolute !important;
-  top: 50% !important;
-  bottom: auto !important;
-  width: 100%; }
+  display: none !important;
+}
 
 .slide-one-item.home-slider .owl-prev {
   left: 10px !important; }
