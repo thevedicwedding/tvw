@@ -1525,6 +1525,99 @@ body.index .site-block-category {
 .strip-section, .strip-section .strip-inner, .strip-section .strip-text, .strip-section .strip-image, .strip-section .strip-image img {
   display: none !important;
 }
+/* Custom Strip Section Styles */
+.custom-strip-section {
+  width: 100vw;
+  background: #f8f6f3;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.custom-strip-inner {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 100vh;
+}
+.custom-strip-slideshow {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.custom-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+.custom-slide img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+@media (max-width: 991.98px) {
+  .custom-strip-section {
+    min-height: unset;
+  }
+  .custom-strip-inner {
+    padding: 12px 0;
+    height: auto;
+  }
+  .custom-strip-slideshow {
+    width: 98vw;
+    max-width: 98vw;
+    height: 220px;
+  }
+  .custom-slide {
+    height: 220px;
+    width: 98vw;
+    border-radius: 10px;
+  }
+  .custom-slide img {
+    border-radius: 10px;
+    height: 220px;
+    width: 98vw;
+  }
+}
+/* Footer positioning */
+.site-footer-custom.redesigned-footer {
+  background: #D4C9BE;
+  color: #111;
+  font-family: 'Josefin Sans', Arial, sans-serif;
+  border-top: none;
+  margin-top: 0;
+  letter-spacing: 0.01em;
+  box-shadow: 0 -1px 6px rgba(0,0,0,0.03);
+  font-size: 1.08rem;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 991.98px) {
+  .site-footer-custom.redesigned-footer {
+    margin-top: 0;
+  }
+}
 @media (max-width: 991.98px) {
   .strip-section .strip-inner {
     flex-direction: column;
