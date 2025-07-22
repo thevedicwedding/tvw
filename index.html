@@ -29,10 +29,7 @@
 
 </head>
 <body style="color: #111;">
-
   <div class="site-wrap fade-in">
-
-
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -41,21 +38,14 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    
-
-
-
     <header class="site-navbar py-3 fixed-top navbar-solid" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: #fff; z-index: 1030; width: 100vw; left: 0; right: 0;">
-
       <div class="container-fluid">
         <div class="row align-items-center">
-
           <div class="col-6 col-xl-2" data-aos="fade-down">
-<h1 class="mb-0"><a href="index.html" class="site-logo"><img src="tvwlogo.png" alt="The Vedic Wedding Logo"><span class="sr-only">The Vedic Wedding</span></a></h1>
+            <h1 class="mb-0"><a href="index.html" class="site-logo"><img src="tvwlogo.png" alt="The Vedic Wedding Logo"><span class="sr-only">The Vedic Wedding</span></a></h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li class="active"><a href="index.html">Home</a></li>
                 <li class="has-children">
@@ -75,7 +65,6 @@
               </ul>
             </nav>
           </div>
-
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
@@ -96,23 +85,11 @@
                 </li>
               </ul>
             </div>
-
             <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
           </div>
-
         </div>
       </div>
-      
     </header>
-
-
-
-
-
-
-
-
     <!-- Footer Start -->
     <footer class="site-footer-custom redesigned-footer">
       <div class="container-fluid">
@@ -148,7 +125,20 @@
       </div>
     </footer>
     <!-- Footer End -->
-
+    <!-- Custom Strip Section with Slideshow -->
+    <section class="custom-strip-section">
+      <div class="custom-strip-inner">
+        <div class="custom-strip-slideshow owl-carousel">
+          <div class="custom-slide"><img src="images/img_1.jpg" alt="Gallery Image 1"></div>
+          <div class="custom-slide"><img src="images/img_2.jpg" alt="Gallery Image 2"></div>
+          <div class="custom-slide"><img src="images/img_3.jpg" alt="Gallery Image 3"></div>
+          <div class="custom-slide"><img src="images/img_4.jpg" alt="Gallery Image 4"></div>
+          <div class="custom-slide"><img src="images/img_5.jpg" alt="Gallery Image 5"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Custom Strip Section -->
+  </div>
     
 
     
@@ -157,6 +147,63 @@
 
 
   <style>
+    /* Custom Strip Section Styles */
+    .custom-strip-section {
+      width: 100vw;
+      background: #f8f6f3;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .custom-strip-inner {
+      width: 100vw;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 32px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .custom-strip-slideshow {
+      width: 90vw;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .custom-slide {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      overflow: hidden;
+    }
+    .custom-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+    @media (max-width: 991.98px) {
+      .custom-strip-inner {
+        padding: 12px 0;
+      }
+      .custom-strip-slideshow {
+        width: 98vw;
+        max-width: 98vw;
+      }
+      .custom-slide {
+        height: 220px;
+        border-radius: 10px;
+      }
+      .custom-slide img {
+        border-radius: 10px;
+      }
+    }
     /* Desktop strip section height */
     @media (min-width: 992px) {
       .strip-section .strip-inner {
@@ -328,6 +375,25 @@
   <script src="js/jquery.mousewheel.min.js"></script>
 
   <script src="js/main.js"></script>
+  <script>
+    // Initialize Owl Carousel for custom strip slideshow
+    $(document).ready(function(){
+      if ($('.custom-strip-slideshow').length && typeof $.fn.owlCarousel === 'function') {
+        $('.custom-strip-slideshow').owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          nav: false,
+          dots: true,
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
+          smartSpeed: 800
+        });
+      }
+    });
+  </script>
   <script>
     // Initialize Stellar.js for parallax effect
     $(function(){
