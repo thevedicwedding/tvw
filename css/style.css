@@ -1521,45 +1521,9 @@ body.index .site-block-category {
 }
 
 /* Strip section desktop and mobile optimization */
-.strip-section {
-  width: 100vw;
-  background: #f8f6f3;
-  margin: 0;
-  padding: 0;
-}
-.strip-section .strip-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  min-height: 260px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.strip-section .strip-text,
-.strip-section .strip-image {
-  flex: 1 1 320px;
-  min-width: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 24px;
-}
-.strip-section .strip-text {
-  background: rgba(211,47,47,0.07);
-  height: 700px;
-}
-.strip-section .strip-image {
-  background: #fff;
-  height: 700px;
-  padding: 32px 0;
-}
-.strip-section .strip-image img {
-  width: 90%;
-  max-width: 420px;
-  max-height: 600px;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  object-fit: cover;
+/* Remove homepage strip section for blank canvas */
+.strip-section, .strip-section .strip-inner, .strip-section .strip-text, .strip-section .strip-image, .strip-section .strip-image img {
+  display: none !important;
 }
 @media (max-width: 991.98px) {
   .strip-section .strip-inner {
