@@ -1576,6 +1576,85 @@ body.index .site-block-category {
     max-width: 98vw;
     max-height: 220px;
     border-radius: 12px;
+  /* Fix strip section overlap: ensure image and text do not overlap */
+  .strip-section .strip-text {
+    position: relative;
+    z-index: 2;
+    background: rgba(201,176,55,0.07);
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+  .strip-section .strip-image {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    margin-top: 0;
+    box-shadow: none;
+  }
+  .strip-section .strip-image img {
+    display: block;
+    margin: 0 auto;
+    position: static;
+    z-index: 1;
+  }
+  /* Add spacing between text and image on mobile */
+  .strip-section .strip-text {
+    margin-bottom: 12px;
+  }
+  .strip-section .strip-image {
+    margin-top: 0;
+  }
+  }
+  /* Fix mobile slider: show images, not just black */
+  .site-blocks-cover,
+  .site-blocks-cover .slide-one-item,
+  .site-blocks-cover .slide-item {
+    background: #000 !important;
+    min-height: 220px !important;
+    height: 28vh !important;
+    max-height: 320px !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+  }
+  .slide-one-item .slide-item {
+    background: none !important;
+  }
+  .slide-one-item .slide-item img,
+  .site-blocks-cover .slide-item img {
+    display: block !important;
+    width: 100vw !important;
+    height: 28vh !important;
+    max-height: 320px !important;
+    object-fit: cover !important;
+    background: #000 !important;
+    border-radius: 0 !important;
+    margin: 0 auto !important;
+  }
+  /* Ensure Owl Carousel is visible and working on mobile */
+  .slide-one-item.home-slider,
+  .owl-carousel,
+  .home-slider {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .slide-one-item.home-slider .owl-nav {
+    display: none !important;
+  }
+  .slide-one-item.home-slider .owl-dots {
+    display: block !important;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
   }
 }
 /* Enhanced mobile optimization for all major sections */
