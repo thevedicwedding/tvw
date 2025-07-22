@@ -90,19 +90,34 @@
         </div>
       </div>
     </header>
-    <!-- Custom Strip Section with Slideshow -->
-    <section class="custom-strip-section">
-      <div class="custom-strip-inner">
-        <div class="custom-strip-slideshow owl-carousel">
-          <div class="custom-slide"><img src="images/img_1.jpg" alt="Gallery Image 1"></div>
-          <div class="custom-slide"><img src="images/img_2.jpg" alt="Gallery Image 2"></div>
-          <div class="custom-slide"><img src="images/img_3.jpg" alt="Gallery Image 3"></div>
-          <div class="custom-slide"><img src="images/img_4.jpg" alt="Gallery Image 4"></div>
-          <div class="custom-slide"><img src="images/img_5.jpg" alt="Gallery Image 5"></div>
+    <!-- Strip 1: Fullscreen Slideshow -->
+    <section class="strip-1">
+      <div class="strip-1-inner">
+        <div class="strip-1-slideshow owl-carousel">
+          <div class="strip-1-slide"><img src="images/img_1.jpg" alt="Gallery Image 1"></div>
+          <div class="strip-1-slide"><img src="images/img_2.jpg" alt="Gallery Image 2"></div>
+          <div class="strip-1-slide"><img src="images/img_3.jpg" alt="Gallery Image 3"></div>
+          <div class="strip-1-slide"><img src="images/img_4.jpg" alt="Gallery Image 4"></div>
+          <div class="strip-1-slide"><img src="images/img_5.jpg" alt="Gallery Image 5"></div>
         </div>
       </div>
     </section>
-    <!-- End Custom Strip Section -->
+    <!-- End Strip 1 -->
+    <!-- Strip 2: Text & Image Split Section -->
+    <section class="strip-2">
+      <div class="strip-2-inner">
+        <div class="strip-2-content">
+          <div class="strip-2-left">
+            <h1 class="strip-2-title">Luxury Wedding Experience</h1>
+            <p class="strip-2-desc">Experience the elegance and tradition of a Vedic wedding. Our team crafts unforgettable moments with a touch of luxury and timeless beauty. Discover the art of celebration, where every detail is curated for perfection.</p>
+          </div>
+          <div class="strip-2-right">
+            <img src="images/img_3.jpg" alt="Demo Gallery Image" class="strip-2-img">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Strip 2 -->
     <!-- Footer Start -->
     <footer class="site-footer-custom redesigned-footer">
       <div class="container-fluid">
@@ -381,10 +396,10 @@
 
   <script src="js/main.js"></script>
   <script>
-    // Initialize Owl Carousel for custom strip slideshow
+    // Initialize Owl Carousel for Strip 1 slideshow
     $(document).ready(function(){
-      if ($('.custom-strip-slideshow').length && typeof $.fn.owlCarousel === 'function') {
-        $('.custom-strip-slideshow').owlCarousel({
+      if ($('.strip-1-slideshow').length && typeof $.fn.owlCarousel === 'function') {
+        $('.strip-1-slideshow').owlCarousel({
           items: 1,
           loop: true,
           autoplay: true,
@@ -397,6 +412,20 @@
           smartSpeed: 800
         });
       }
+      // Animate Strip 2 on scroll (GROW from bottom)
+      function growOnScroll() {
+        var $strip2 = $('.strip-2');
+        if ($strip2.length) {
+          var winScroll = $(window).scrollTop();
+          var winHeight = $(window).height();
+          var strip2Offset = $strip2.offset().top;
+          if (winScroll + winHeight > strip2Offset + 100) {
+            $strip2.addClass('grow-in');
+          }
+        }
+      }
+      $(window).on('scroll', growOnScroll);
+      growOnScroll();
     });
   </script>
   <script>
