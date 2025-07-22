@@ -171,7 +171,7 @@
     <!-- Strip Section Start -->
     <div class="strip-section" style="width: 100vw; background: #f8f6f3; margin: 0; padding: 0;">
       <div class="strip-inner" style="display: flex; flex-wrap: wrap; align-items: stretch; min-height: 260px; max-width: 1400px; margin: 0 auto;">
-        <div class="strip-text" style="flex: 1 1 320px; min-width: 260px; display: flex; align-items: center; justify-content: center; background: rgba(211,47,47,0.07); padding: 32px 24px;">
+        <div class="strip-text" style="flex: 1 1 320px; min-width: 260px; display: flex; align-items: center; justify-content: center; background: rgba(211,47,47,0.07); padding: 32px 24px; height: 700px;">
           <div style="max-width: 480px; width: 100%;">
             <h2 style="color: #d32f2f; font-family: 'Josefin Sans', Arial, sans-serif; font-size: 2rem; font-weight: 700; margin-bottom: 16px;">Why Choose The Vedic Wedding?</h2>
             <p style="font-size: 1.08rem; color: #222; margin-bottom: 16px;">We blend tradition, creativity, and emotion to capture your most precious moments. Our team specializes in fashion, food, product, pre-wedding, wedding, and baby photography, ensuring every story is told beautifully.</p>
@@ -183,8 +183,8 @@
             </ul>
           </div>
         </div>
-        <div class="strip-image" style="flex: 1 1 320px; min-width: 260px; display: flex; align-items: center; justify-content: center; background: #fff; padding: 32px 0;">
-          <img src="images/img_1.jpg" alt="Gallery Sample" style="width: 90%; max-width: 420px; max-height: 240px; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.10); object-fit: cover;">
+        <div class="strip-image" style="flex: 1 1 320px; min-width: 260px; display: flex; align-items: center; justify-content: center; background: #fff; padding: 32px 0; height: 700px;">
+          <img src="images/img_1.jpg" alt="Gallery Sample" style="width: 90%; max-width: 420px; max-height: 600px; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.10); object-fit: cover;">
         </div>
       </div>
     </div>
@@ -300,6 +300,19 @@
 
 
   <style>
+    /* Desktop strip section height */
+    @media (min-width: 992px) {
+      .strip-section .strip-inner {
+        min-height: 700px !important;
+      }
+      .strip-section .strip-text,
+      .strip-section .strip-image {
+        height: 700px !important;
+      }
+      .strip-section img {
+        max-height: 600px !important;
+      }
+    }
     .site-footer-custom.redesigned-footer {
       background: #D4C9BE;
       color: #111;
