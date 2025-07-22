@@ -29,6 +29,10 @@
 
 </head>
 <body style="color: #111;">
+  <!-- Butterfly Loader Start -->
+  <div id="butterfly-loader">
+    <img src="images/butterfly.png" alt="Loading..." class="butterfly-anim">
+  </div>
   <div class="site-wrap fade-in">
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -396,6 +400,16 @@
 
   <script src="js/main.js"></script>
   <script>
+    // Butterfly loader animation
+    window.addEventListener('load', function() {
+      var loader = document.getElementById('butterfly-loader');
+      if (loader) {
+        loader.classList.add('hide-butterfly');
+        setTimeout(function(){ loader.style.display = 'none'; }, 700);
+      }
+    });
+  </script>
+  <script>
     // Initialize Owl Carousel for Strip 1 slideshow
     $(document).ready(function(){
       if ($('.strip-1-slideshow').length && typeof $.fn.owlCarousel === 'function') {
@@ -441,6 +455,46 @@
     });
   </script>
   <style>
+    /* Butterfly Loader Styles */
+    #butterfly-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: transparent;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      transition: opacity 0.7s cubic-bezier(.23,1,.32,1);
+      opacity: 1;
+    }
+    #butterfly-loader.hide-butterfly {
+      opacity: 0;
+      transition: opacity 0.7s cubic-bezier(.23,1,.32,1);
+    }
+    .butterfly-anim {
+      width: 64px;
+      height: 64px;
+      opacity: 0.7;
+      animation: butterfly-flap 1.2s infinite cubic-bezier(.23,1,.32,1), butterfly-float 2.5s infinite ease-in-out;
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.12));
+      pointer-events: none;
+      user-select: none;
+    }
+    @keyframes butterfly-flap {
+      0%, 100% { transform: scaleY(1) rotate(-8deg); }
+      20% { transform: scaleY(1.15) rotate(8deg); }
+      40% { transform: scaleY(0.95) rotate(-8deg); }
+      60% { transform: scaleY(1.1) rotate(8deg); }
+      80% { transform: scaleY(1) rotate(-8deg); }
+    }
+    @keyframes butterfly-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
     .navbar-solid {
       background: #fff !important;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
