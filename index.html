@@ -363,6 +363,14 @@
       padding: 64px 0 48px 0;
       position: relative;
       z-index: 1;
+      /* Animation initial state */
+      opacity: 0;
+      transform: translateX(-80px);
+      transition: opacity 0.8s cubic-bezier(.23,1,.32,1), transform 0.8s cubic-bezier(.23,1,.32,1);
+    }
+    .strip-3.glide-in {
+      opacity: 1;
+      transform: translateX(0);
     }
     .strip-3-inner {
       max-width: 1200px;
@@ -595,6 +603,20 @@
       }
       $(window).on('scroll', growOnScroll);
       growOnScroll();
+      // Animate Strip 3 on scroll (GLIDE from left to right)
+      function glideStrip3() {
+        var $strip3 = $('.strip-3');
+        if ($strip3.length) {
+          var winScroll = $(window).scrollTop();
+          var winHeight = $(window).height();
+          var strip3Offset = $strip3.offset().top;
+          if (winScroll + winHeight > strip3Offset + 100) {
+            $strip3.addClass('glide-in');
+          }
+        }
+      }
+      $(window).on('scroll', glideStrip3);
+      glideStrip3();
       // Initialize LightGallery for Fashion Gallery
       if ($('#fashion-gallery').length && typeof $.fn.lightGallery === 'function') {
         $('#fashion-gallery').lightGallery({
