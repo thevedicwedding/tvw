@@ -91,7 +91,7 @@
       </div>
     </header>
     <!-- Strip 1: Fullscreen Slideshow -->
-    <section class="strip-1">
+    <section class="strip-1" data-stellar-background-ratio="0.5" style="background-image: url('images/parallax_bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
       <div class="strip-1-inner">
         <div class="strip-1-slideshow owl-carousel">
           <div class="strip-1-slide"><img src="images/img_1.jpg" alt="Gallery Image 1"></div>
@@ -158,6 +158,38 @@
 
 
   <style>
+    /* Parallax background for Strip 1 */
+    .strip-1 {
+      position: relative;
+      width: 100vw;
+      min-height: 480px;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+    .strip-1-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .strip-1-slideshow .strip-1-slide img {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border-radius: 18px;
+      max-width: 90vw;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+    @media (max-width: 991.98px) {
+      .strip-1 {
+        min-height: 220px;
+        background-attachment: scroll;
+      }
+      .strip-1-slideshow .strip-1-slide img {
+        border-radius: 12px;
+      }
+    }
     /* Strip 2: Split Text & Image Section Styles */
     .strip-2 {
       width: 100vw;
