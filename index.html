@@ -566,6 +566,7 @@
   <script>
     // Initialize Owl Carousel for Strip 1 slideshow
     $(document).ready(function(){
+      // Fix: Use correct selector for Owl Carousel
       if ($('.strip-1-slideshow').length && typeof $.fn.owlCarousel === 'function') {
         $('.strip-1-slideshow').owlCarousel({
           items: 1,
@@ -642,6 +643,7 @@
           addClass: 'food-gallery-lightbox'
         });
       }
+      // Remove duplicate Owl Carousel initialization for .slide-one-item (not present in HTML)
     });
   </script>
   <script>
