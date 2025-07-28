@@ -149,17 +149,79 @@
           opacity: 1;
         }
         @media (max-width: 991.98px) {
+          .gallery-squares-row {
+            padding: 24px 8px 0 8px !important;
+          }
           .gallery-squares-row .row {
             flex-direction: column;
-            gap: 18px;
+            gap: 28px;
+            align-items: center;
           }
           .gallery-squares-row .col-md-4 {
             max-width: 100%;
+            width: 100%;
+            padding: 0 0 0 0;
+          }
+          .gallery-square {
+            aspect-ratio: 1 / 1;
+            min-width: 0;
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+          }
+          .gallery-square img {
+            border-radius: 18px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .gallery-square-overlay span {
+            font-size: 1.08rem;
+            padding: 6px 12px;
+          }
+          .btn-explore {
+            font-size: 1rem;
+            padding: 8px 18px;
           }
         }
       </style>
     </section>
     <!-- ======= Gallery Squares Row END ======= -->
+
+    <style>
+      body {
+        padding-top: 80px !important;
+      }
+      .site-navbar {
+        transition: box-shadow 0.3s, background 0.3s;
+      }
+      .site-navbar:hover {
+        box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+        background: #f8f6f2;
+      }
+      .btn-explore:hover {
+        background: #d32f2f !important;
+        color: #fff !important;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+        transform: scale(1.05);
+      }
+    </style>
+
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/lightgallery-all.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
 
 
 
