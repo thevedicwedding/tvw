@@ -603,15 +603,13 @@
           thumbnail: true,
           download: false,
           mode: 'lg-fade',
-          share: false,
-          getCaptionFromTitleOrAlt: false,
-          addClass: 'fashion-gallery-lightbox',
-          plugins: [lgZoom, lgThumbnail],
-          licenseKey: '0000-0000-000-0000',
-          // When gallery is closed, redirect to single.html
-          afterClose: function() {
-            window.location.href = 'single.html';
-          }
+          share: true,
+          zoom: true,
+          fullScreen: true,
+          autoplay: true,
+          actualSize: true,
+          getCaptionFromTitleOrAlt: true,
+          addClass: 'fashion-gallery-lightbox'
         });
       }
     });
