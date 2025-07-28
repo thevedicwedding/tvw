@@ -125,28 +125,40 @@
           <h2 class="strip-3-title">Fashion Gallery</h2>
           <p class="strip-3-desc">Explore our fashion gallery.</p>
         </div>
-        <div class="strip-3-gallery row justify-content-center">
+        <div id="fashion-gallery" class="strip-3-gallery row justify-content-center">
           <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-            <img src="images/img_1.jpg" alt="Fashion 1" class="strip-3-img">
+            <a href="images/img_1.jpg" class="strip-3-img-link" data-lg-size="1406-1390">
+              <img src="images/img_1.jpg" alt="Fashion 1" class="strip-3-img">
+            </a>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-            <img src="images/img_2.jpg" alt="Fashion 2" class="strip-3-img">
+            <a href="images/img_2.jpg" class="strip-3-img-link" data-lg-size="1406-1390">
+              <img src="images/img_2.jpg" alt="Fashion 2" class="strip-3-img">
+            </a>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-            <img src="images/img_3.jpg" alt="Fashion 3" class="strip-3-img">
+            <a href="images/img_3.jpg" class="strip-3-img-link" data-lg-size="1406-1390">
+              <img src="images/img_3.jpg" alt="Fashion 3" class="strip-3-img">
+            </a>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-            <img src="images/img_4.jpg" alt="Fashion 4" class="strip-3-img">
+            <a href="images/img_4.jpg" class="strip-3-img-link" data-lg-size="1406-1390">
+              <img src="images/img_4.jpg" alt="Fashion 4" class="strip-3-img">
+            </a>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-            <img src="images/img_5.jpg" alt="Fashion 5" class="strip-3-img">
+            <a href="images/img_5.jpg" class="strip-3-img-link" data-lg-size="1406-1390">
+              <img src="images/img_5.jpg" alt="Fashion 5" class="strip-3-img">
+            </a>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-            <img src="images/img_6.jpg" alt="Fashion 6" class="strip-3-img">
+            <a href="images/img_6.jpg" class="strip-3-img-link" data-lg-size="1406-1390">
+              <img src="images/img_6.jpg" alt="Fashion 6" class="strip-3-img">
+            </a>
           </div>
         </div>
         <div class="strip-3-explore text-center mt-4">
-          <a href="#" class="btn btn-lg btn-explore">Explore</a>
+          <a href="single.html" class="btn btn-lg btn-explore">Explore</a>
         </div>
       </div>
     </section>
@@ -592,7 +604,9 @@
           dots: true,
           animateOut: 'fadeOut',
           animateIn: 'fadeIn',
-          smartSpeed: 800
+          smartSpeed: 800,
+          margin: 0,
+          stagePadding: 0
         });
       }
       // Animate Strip 2 on scroll (GROW from bottom)
@@ -609,6 +623,14 @@
       }
       $(window).on('scroll', growOnScroll);
       growOnScroll();
+      // Initialize LightGallery for Fashion Gallery
+      if ($('#fashion-gallery').length && typeof $.fn.lightGallery === 'function') {
+        $('#fashion-gallery').lightGallery({
+          selector: '.strip-3-img-link',
+          thumbnail: true,
+          download: false
+        });
+      }
     });
   </script>
   <script>
