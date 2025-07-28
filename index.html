@@ -365,14 +365,14 @@
       z-index: 1;
       /* Animation initial state */
       opacity: 0;
-      transform: translateX(-80px);
+      transform: translateY(80px) scaleY(0.95);
       transition: opacity 0.8s cubic-bezier(.23,1,.32,1), transform 0.8s cubic-bezier(.23,1,.32,1);
     }
-    .strip-3.glide-in {
+    .strip-3.grow-in {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0) scaleY(1);
     }
-    /* Strip 4: Food/Jewellery Gallery Styles (right to left animation) */
+    /* Strip 4: Food/Jewellery Gallery Styles (vertical animation) */
     .strip-4 {
       width: 100vw;
       background: #fff;
@@ -380,14 +380,14 @@
       position: relative;
       z-index: 1;
       opacity: 0;
-      transform: translateX(80px);
+      transform: translateY(80px) scaleY(0.95);
       transition: opacity 0.8s cubic-bezier(.23,1,.32,1), transform 0.8s cubic-bezier(.23,1,.32,1);
     }
-    .strip-4.glide-in {
+    .strip-4.grow-in {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0) scaleY(1);
     }
-    /* Strip 5: Product/Food Gallery Styles (left to right animation) */
+    /* Strip 5: Product/Food Gallery Styles (vertical animation) */
     .strip-5 {
       width: 100vw;
       background: #f8f6f2;
@@ -395,12 +395,12 @@
       position: relative;
       z-index: 1;
       opacity: 0;
-      transform: translateX(-80px);
+      transform: translateY(80px) scaleY(0.95);
       transition: opacity 0.8s cubic-bezier(.23,1,.32,1), transform 0.8s cubic-bezier(.23,1,.32,1);
     }
-    .strip-5.glide-in {
+    .strip-5.grow-in {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0) scaleY(1);
     }
     .strip-3-inner {
       max-width: 1200px;
@@ -633,48 +633,46 @@
       }
       $(window).on('scroll', growOnScroll);
       growOnScroll();
-      // Animate Strip 3 on scroll (GLIDE from left to right)
-      function glideStrip3() {
+      // Animate Strip 3, 4, 5 on scroll (GROW from bottom)
+      function growStrip3() {
         var $strip3 = $('.strip-3');
         if ($strip3.length) {
           var winScroll = $(window).scrollTop();
           var winHeight = $(window).height();
           var strip3Offset = $strip3.offset().top;
           if (winScroll + winHeight > strip3Offset + 100) {
-            $strip3.addClass('glide-in');
+            $strip3.addClass('grow-in');
           }
         }
       }
-      // Animate Strip 4 on scroll (GLIDE from right to left)
-      function glideStrip4() {
+      function growStrip4() {
         var $strip4 = $('.strip-4');
         if ($strip4.length) {
           var winScroll = $(window).scrollTop();
           var winHeight = $(window).height();
           var strip4Offset = $strip4.offset().top;
           if (winScroll + winHeight > strip4Offset + 100) {
-            $strip4.addClass('glide-in');
+            $strip4.addClass('grow-in');
           }
         }
       }
-      // Animate Strip 5 on scroll (GLIDE from left to right)
-      function glideStrip5() {
+      function growStrip5() {
         var $strip5 = $('.strip-5');
         if ($strip5.length) {
           var winScroll = $(window).scrollTop();
           var winHeight = $(window).height();
           var strip5Offset = $strip5.offset().top;
           if (winScroll + winHeight > strip5Offset + 100) {
-            $strip5.addClass('glide-in');
+            $strip5.addClass('grow-in');
           }
         }
       }
-      $(window).on('scroll', glideStrip3);
-      $(window).on('scroll', glideStrip4);
-      $(window).on('scroll', glideStrip5);
-      glideStrip3();
-      glideStrip4();
-      glideStrip5();
+      $(window).on('scroll', growStrip3);
+      $(window).on('scroll', growStrip4);
+      $(window).on('scroll', growStrip5);
+      growStrip3();
+      growStrip4();
+      growStrip5();
       // Initialize LightGallery for Fashion Gallery
       if ($('#fashion-gallery').length && typeof $.fn.lightGallery === 'function') {
         $('#fashion-gallery').lightGallery({
