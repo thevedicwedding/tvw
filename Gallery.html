@@ -102,207 +102,151 @@
         }
       });
     </script>
-
-
-
-
-
-    <!-- ======= FOOTER SECTION START ======= -->
-    <footer class="site-footer-custom redesigned-footer">
+    
+    <!-- ======= Masonry Gallery Section START ======= -->
+    <section class="masonry-gallery-section" style="padding: 48px 0; background: #fff;">
       <div class="container-fluid">
-        <div class="row align-items-center py-3">
-          <div class="col-12 col-md-4 text-center text-md-left mb-2 mb-md-0">
-            <span class="footer-section-title">Socials</span>
-            <span class="footer-social-icons ml-2">
-              <a href="https://www.facebook.com/pallabphotography.in" target="_blank" rel="noopener" aria-label="Facebook"><span class="icon-facebook"></span></a>
-              <a href="https://www.pinterest.com/*" target="_blank" rel="noopener" aria-label="Pinterest"><span class="icon-pinterest"></span></a>
-              <a href="https://www.behance.net/*" target="_blank" rel="noopener" aria-label="Behance"><span class="icon-behance"></span></a>
-              <a href="https://www.instagram.com/pallabphotography_" target="_blank" rel="noopener" aria-label="Instagram"><span class="icon-instagram"></span></a>
-             
-            </span>
+        <div class="masonry-gallery-grid">
+          <div class="masonry-gallery-item">
+            <a href="images/gallery_1.jpg" class="masonry-gallery-link" data-caption="Fashion Shoot" data-lg-size="1406-1390">
+              <img src="images/gallery_1.jpg" alt="Fashion Shoot" class="masonry-gallery-img">
+              <div class="masonry-gallery-overlay">
+                <span class="masonry-gallery-caption">Fashion Shoot</span>
+              </div>
+            </a>
           </div>
-          <div class="col-12 col-md-4 text-center mb-2 mb-md-0">
-            <span class="footer-section-title">Sitemap</span>
-            <span class="footer-links ml-2">
-              <a href="index.html">Home</a> |
-              <a href="Gallery.html">Gallery</a> |
-              
-              <a href="about.html">About</a> |
-              <a href="contact.html">Contact</a>
-            </span>
+          <div class="masonry-gallery-item">
+            <a href="images/gallery_2.jpg" class="masonry-gallery-link" data-caption="Jewellery" data-lg-size="1406-1390">
+              <img src="images/gallery_2.jpg" alt="Jewellery" class="masonry-gallery-img">
+              <div class="masonry-gallery-overlay">
+                <span class="masonry-gallery-caption">Jewellery</span>
+              </div>
+            </a>
           </div>
-          <div class="col-12 col-md-4 text-center text-md-right">
-            <span class="footer-section-title">Contact</span>
-            <span class="footer-contact ml-2">
-              <a href="mailto:pallabphotographykolkata@gmail.com">pallabphotographykolkata@gmail.com</a>
-            </span>
-            <div class="footer-copyright mt-2">© 2025 Pallab Photography</div>
+          <div class="masonry-gallery-item">
+            <a href="images/gallery_3.jpg" class="masonry-gallery-link" data-caption="Food" data-lg-size="1406-1390">
+              <img src="images/gallery_3.jpg" alt="Food" class="masonry-gallery-img">
+              <div class="masonry-gallery-overlay">
+                <span class="masonry-gallery-caption">Food</span>
+              </div>
+            </a>
           </div>
+          <div class="masonry-gallery-item">
+            <a href="images/gallery_4.jpg" class="masonry-gallery-link" data-caption="Product" data-lg-size="1406-1390">
+              <img src="images/gallery_4.jpg" alt="Product" class="masonry-gallery-img">
+              <div class="masonry-gallery-overlay">
+                <span class="masonry-gallery-caption">Product</span>
+              </div>
+            </a>
+          </div>
+          <!-- Add more items as needed -->
         </div>
       </div>
-    </footer>
-    <!-- ======= FOOTER SECTION END ======= -->
-
+    </section>
+    <!-- ======= Masonry Gallery Section END ======= -->
     <style>
-      .site-footer-custom.redesigned-footer {
-        background: #D4C9BE;
-        color: #111;
-        font-family: 'Josefin Sans', Arial, sans-serif;
-        border-top: none;
-        margin-top: 40px;
-        letter-spacing: 0.01em;
-        box-shadow: 0 -1px 6px rgba(0,0,0,0.03);
+      .masonry-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+        margin: 0 auto;
+        max-width: 1400px;
+      }
+      .masonry-gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        background: #fff;
+      }
+      .masonry-gallery-img {
+        width: 100%;
+        display: block;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s cubic-bezier(.23,1,.32,1);
+        border-radius: 16px;
+      }
+      .masonry-gallery-item:hover .masonry-gallery-img {
+        transform: scale(1.04);
+      }
+      .masonry-gallery-overlay {
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        top: 0;
+        background: rgba(34,34,34,0.08);
+        opacity: 0;
+        transition: opacity 0.3s;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        pointer-events: none;
+        border-radius: 16px;
+      }
+      .masonry-gallery-item:hover .masonry-gallery-overlay {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .masonry-gallery-caption {
+        color: #fff;
+        background: rgba(34,34,34,0.7);
         font-size: 1.08rem;
-        padding: 0;
+        font-family: 'Montserrat', Arial, sans-serif;
+        padding: 8px 18px;
+        border-radius: 12px;
+        margin: 18px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        letter-spacing: 0.01em;
       }
-      .site-footer-custom .footer-section-title {
-        font-weight: 700;
-        color: #d32f2f;
-        font-size: 1.1rem;
-        margin-right: 8px;
-        letter-spacing: 0.02em;
-      }
-      .site-footer-custom .footer-social-icons a {
-        color: #d32f2f;
-        font-size: 1.3rem;
-        margin: 0 6px;
-        display: inline-block;
-        transition: color 0.2s;
-      }
-      .site-footer-custom .footer-social-icons a:hover {
-        color: #111;
-      }
-      .site-footer-custom .footer-links a {
-        color: #111;
-        text-decoration: none;
-        margin: 0 2px;
-        font-weight: 500;
-        transition: color 0.2s;
-      }
-      .site-footer-custom .footer-links a:hover {
-        color: #d32f2f;
-        text-decoration: underline;
-      }
-      .site-footer-custom .footer-contact a {
-        color: #d32f2f;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s;
-      }
-      .site-footer-custom .footer-contact a:hover {
-        color: #111;
-        text-decoration: underline;
-      }
-      .site-footer-custom .footer-copyright {
-        font-size: 0.98rem;
-        color: #888;
-        margin-top: 4px;
-      }
-      @media (max-width: 991.98px) {
-        .site-footer-custom .footer-section-title {
-          display: block;
-          margin-bottom: 4px;
+      @media (max-width: 767.98px) {
+        .masonry-gallery-grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
         }
-        .site-footer-custom .footer-social-icons,
-        .site-footer-custom .footer-links,
-        .site-footer-custom .footer-contact {
-          display: block;
-          margin: 0 auto 8px auto;
-        }
-        .site-footer-custom .footer-copyright {
-          margin-top: 8px;
-        }
-        .site-footer-custom .row > div {
-          margin-bottom: 10px;
+        .masonry-gallery-caption {
+          font-size: 1rem;
+          margin-bottom: 12px;
         }
       }
     </style>
-
-    
-    
-  </div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/aos.js"></script>
-
-  <script src="js/picturefill.min.js"></script>
-  <script src="js/lightgallery-all.min.js"></script>
-  <script src="js/jquery.mousewheel.min.js"></script>
-
-  <script src="js/main.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('#lightgallery').lightGallery({
-        download: false, // Disable download button in lightGallery (including fullscreen)
-        subHtmlSelectorRelative: true,
-        getCaptionFromTitleOrAlt: false,
-        addClass: 'no-photo-desc',
-        // Hide photo description by overriding the default sub-html
-        onBeforeSlide: function(event, prevIndex, index) {
-          var $lg = $('#lightgallery');
-          $lg.find('.lg-sub-html').hide();
-          // Remove grayscale in fullscreen for the current slide
-          setTimeout(function() {
-            var $img = $('.lg-current .lg-image');
-            $img.css({
-              'filter': 'none',
-              '-webkit-filter': 'none',
-              'transition': 'none'
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/lightgallery-all.min.js"></script>
+    <script>
+      // Initialize Masonry after images are loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        var grid = document.querySelector('.masonry-gallery-grid');
+        if (grid && window.Masonry) {
+          imagesLoaded(grid, function() {
+            new Masonry(grid, {
+              itemSelector: '.masonry-gallery-item',
+              columnWidth: '.masonry-gallery-item',
+              percentPosition: true,
+              gutter: 18
             });
-            // Do NOT unbind mouse/touch events, so swipe works
-          }, 50);
-        },
-        // Remove grayscale/color hover effect in fullscreen as well
-        onAfterOpen: function() {
-          setTimeout(function() {
-            $('.lg-outer img').css({
-              'filter': 'none',
-              '-webkit-filter': 'none',
-              'transition': 'none'
-            });
-            // Do NOT unbind mouse/touch events, so swipe works
-          }, 100);
-        },
-        // Disable right-click in fullscreen
-        onSlideItemLoad: function() {
-          setTimeout(function() {
-            $('.lg-outer img').on('contextmenu', function(e) { return false; });
-            $('.lg-outer img').on('dragstart', function(e) { return false; });
-            // Remove grayscale for all images in fullscreen
-            $('.lg-outer img').css({
-              'filter': 'none',
-              '-webkit-filter': 'none',
-              'transition': 'none'
-            });
-          }, 100);
+          });
+        }
+        // Initialize LightGallery for Masonry Gallery
+        if (grid && window.lightGallery) {
+          lightGallery(grid, {
+            selector: '.masonry-gallery-link',
+            thumbnail: true,
+            download: false,
+            mode: 'lg-fade',
+            share: true,
+            zoom: true,
+            fullScreen: true,
+            autoplay: true,
+            actualSize: true,
+            getCaptionFromTitleOrAlt: false,
+            addClass: 'masonry-gallery-lightbox',
+            subHtmlSelectorRelative: true,
+            exThumbImage: 'data-caption'
+          });
         }
       });
-      // Also hide sub-html on init (in case first image shows it)
-      $('#lightgallery').on('onAfterOpen.lg', function(event){
-        $('.lg-sub-html').hide();
-      });
-      // Disable right-click and drag on all images (main page)
-      $('img').on('contextmenu', function(e) { return false; });
-      $('img').on('dragstart', function(e) { return false; });
-      // Remove grayscale/color hover effect on gallery images (main page)
-      $('#lightgallery img').css({
-        'filter': 'none',
-        '-webkit-filter': 'none',
-        'transition': 'none'
-      });
-      // Do NOT unbind mouse/touch events on #lightgallery img
-    });
-  </script>
+    </script>
 
-</body>
-</html>
+
+
