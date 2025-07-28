@@ -119,6 +119,39 @@
       </div>
     </section>
     <!-- End Strip 2 -->
+    <!-- Strip 3: Fashion Gallery Section -->
+    <section class="strip-3">
+      <div class="strip-3-inner">
+        <div class="strip-3-header text-center">
+          <h2 class="strip-3-title">Fashion Gallery</h2>
+          <p class="strip-3-desc">Explore our fashion gallery.</p>
+        </div>
+        <div class="strip-3-gallery row justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+            <img src="images/fashion_1.jpg" alt="Fashion 1" class="strip-3-img">
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+            <img src="images/fashion_2.jpg" alt="Fashion 2" class="strip-3-img">
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+            <img src="images/fashion_3.jpg" alt="Fashion 3" class="strip-3-img">
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+            <img src="images/fashion_4.jpg" alt="Fashion 4" class="strip-3-img">
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+            <img src="images/fashion_5.jpg" alt="Fashion 5" class="strip-3-img">
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+            <img src="images/fashion_6.jpg" alt="Fashion 6" class="strip-3-img">
+          </div>
+        </div>
+        <div class="strip-3-explore text-center mt-4">
+          <a href="#" class="btn btn-lg btn-explore">Explore</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Strip 3 -->
     <!-- Footer Start -->
     <footer class="site-footer-custom redesigned-footer">
       <div class="container-fluid">
@@ -159,6 +192,94 @@
 
 
   <style>
+    /* Strip 3: Fashion Gallery Styles */
+    .strip-3 {
+      width: 100vw;
+      background: #f8f6f2;
+      padding: 64px 0 48px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .strip-3-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+    .strip-3-header {
+      margin-bottom: 32px;
+    }
+    .strip-3-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #bfa76a;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+    }
+    .strip-3-desc {
+      font-size: 1.15rem;
+      color: #222;
+      margin-bottom: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .strip-3-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .strip-3-img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+      object-fit: cover;
+      transition: transform 0.2s;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+    .strip-3-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .btn-explore {
+      background: #bfa76a;
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 600;
+      border-radius: 24px;
+      padding: 12px 38px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s, color 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: none;
+      outline: none;
+    }
+    .btn-explore:hover {
+      background: #d32f2f;
+      color: #fff;
+    }
+    @media (max-width: 991.98px) {
+      .strip-3-inner {
+        padding: 0 8px;
+      }
+      .strip-3-title {
+        font-size: 1.5rem;
+      }
+      .strip-3-desc {
+        font-size: 1rem;
+      }
+      .strip-3-img {
+        max-width: 98vw;
+        border-radius: 10px;
+      }
+      .btn-explore {
+        font-size: 1rem;
+        padding: 10px 24px;
+      }
+    }
     /* Parallax background for Strip 1 */
     .strip-1 {
       position: relative;
