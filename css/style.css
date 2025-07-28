@@ -1,10 +1,11 @@
 /* Glide-in animation for strips 3, 4, and 5 */
+
 .strip-3, .strip-4, .strip-5 {
   opacity: 0;
   transform: translateY(80px) scaleY(0.95);
   transition: opacity 2.2s cubic-bezier(.25,1,.35,1), transform 2.2s cubic-bezier(.25,1,.35,1);
 }
- .strip-3.grow-in, .strip-4.grow-in, .strip-5.grow-in {
+.strip-3.grow-in, .strip-4.grow-in, .strip-5.grow-in {
   opacity: 1;
   transform: translateY(0) scaleY(1);
 }
