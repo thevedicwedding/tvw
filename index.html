@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home &mdash; Pallab Photography</title>
+  <title>Fashion &mdash; Pallab Photography </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,11 +25,12 @@
   <link rel="stylesheet" href="css/aos.css">
 
   <link rel="stylesheet" href="css/style.css">
-  <!-- Luxury/Minimal custom style moved to style.css -->
 
 </head>
-<body style="color: #111;">
-  <div class="site-wrap fade-in">
+<body class="single">
+
+  <div class="site-wrap">
+
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -38,7 +39,12 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    <header class="site-navbar py-3 fixed-top navbar-solid" id="main-navbar" role="banner" style="transition: background 0.3s, box-shadow 0.3s; background: #fff; z-index: 1030; width: 100vw; left: 0; right: 0;">
+    
+
+
+
+    <!-- ======= NAVIGATOR SECTION START ======= -->
+    <header class="site-navbar py-3 navbar-solid" role="banner" style="position:fixed; top:0; left:0; width:100%; background:#fff; z-index:1000; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-6 col-xl-2" data-aos="fade-down">
@@ -47,16 +53,17 @@
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li class="has-children">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-children active">
                   <a href="Gallery.html">Gallery</a>
                   <ul class="dropdown">
                     <li><a href="Fashion.html">Fashion</a></li>
                     <li><a href="Food.html">Food</a></li>
                     <li><a href="Product.html">Product</a></li>
+                    
                   </ul>
-               
-               
+                </li>
+              
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
@@ -66,18 +73,17 @@
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
-                  <a href="https://www.facebook.com/thevedicwedding" class="pl-0 pr-3" target="_blank" rel="noopener"><span class="icon-facebook"></span></a>
+                  <a href="https://www.facebook.com/pallabphotography.in" class="pl-0 pr-3" target="_blank" rel="noopener"><span class="icon-facebook"></span></a>
                 </li>
                 <li>
-                  <a href="https://www.pinterest.com/thevedicwedding" class="pl-3 pr-3" target="_blank" rel="noopener"><span class="icon-pinterest"></span></a>
+                  <a href="https://www.pinterest.com/*" class="pl-3 pr-3" target="_blank" rel="noopener"><span class="icon-pinterest"></span></a>
                 </li>
                 <li>
-                  <a href="https://www.behance.net/thevedicwedding" class="pl-3 pr-3" target="_blank" rel="noopener"><span class="icon-behance"></span></a>
+                  <a href="https://www.behance.net/*" class="pl-3 pr-3" target="_blank" rel="noopener"><span class="icon-behance"></span></a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/thevedicwedding" class="pl-3 pr-3" target="_blank" rel="noopener"><span class="icon-instagram"></span></a>
+                  <a href="https://www.instagram.com/pallabphotography_" class="pl-3 pr-3" target="_blank" rel="noopener"><span class="icon-instagram"></span></a>
                 </li>
-               
               </ul>
             </div>
             <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
@@ -85,6 +91,20 @@
         </div>
       </div>
     </header>
+    <!-- ======= NAVIGATOR SECTION END ======= -->
+
+    <script>
+      // Adjust body padding-top to navbar height to prevent content overlap
+      document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.querySelector('.site-navbar');
+        if (navbar) {
+          document.body.style.paddingTop = navbar.offsetHeight + 'px';
+        }
+      });
+    </script>
+
+
+
     <!-- Strip 1: Fullscreen Slideshow -->
     <section class="strip-1">
       <div class="strip-1-inner">
