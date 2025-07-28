@@ -203,125 +203,6 @@
 
 
   <style>
-    /* Strip 3: Fashion Gallery Styles */
-    .strip-3 {
-      width: 100vw;
-      background: #f8f6f2;
-      padding: 64px 0 48px 0;
-      position: relative;
-      z-index: 1;
-    }
-    .strip-3-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
-    .strip-3-header {
-      margin-bottom: 32px;
-    }
-    .strip-3-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #bfa76a;
-      margin-bottom: 12px;
-      letter-spacing: 0.01em;
-    }
-    .strip-3-desc {
-      font-size: 1.15rem;
-      color: #222;
-      margin-bottom: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-    }
-    .strip-3-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-    .strip-3-img {
-      width: 100%;
-      max-width: 180px;
-      border-radius: 14px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
-      object-fit: cover;
-      transition: transform 0.2s;
-      cursor: pointer;
-      display: block;
-      margin: 0 auto;
-    }
-    .strip-3-img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-    }
-    .btn-explore {
-      background: #bfa76a;
-      color: #fff;
-      font-size: 1.15rem;
-      font-weight: 600;
-      border-radius: 24px;
-      padding: 12px 38px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      transition: background 0.2s, color 0.2s;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      border: none;
-      outline: none;
-    }
-    .btn-explore:hover {
-      background: #d32f2f;
-      color: #fff;
-    }
-    @media (max-width: 991.98px) {
-      .strip-3-inner {
-        padding: 0 8px;
-      }
-      .strip-3-title {
-        font-size: 1.5rem;
-      }
-      .strip-3-desc {
-        font-size: 1rem;
-      }
-      .strip-3-img {
-        max-width: 98vw;
-        border-radius: 10px;
-      }
-      .btn-explore {
-        font-size: 1rem;
-        padding: 10px 24px;
-      }
-    }
-    /* Parallax background for Strip 1 */
-    .strip-1 {
-      position: relative;
-      width: 100vw;
-      min-height: 600px;
-      background-size: cover;
-      background-position: center;
-      z-index: 1;
-    }
-    .strip-1-inner {
-      position: relative;
-      z-index: 2;
-    }
-    .strip-1-slideshow .strip-1-slide img {
-      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-      border-radius: 18px;
-      max-width: 90vw;
-      width: 100%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-    }
-    @media (max-width: 991.98px) {
-      .strip-1 {
-        min-height: 220px;
-        background-attachment: scroll;
-      }
-      .strip-1-slideshow .strip-1-slide img {
-        border-radius: 12px;
-      }
-    }
     /* Strip 2: Split Text & Image Section Styles */
     .strip-2 {
       width: 100vw;
@@ -331,7 +212,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 700px;
+      min-height: 480px;
       position: relative;
       z-index: 1;
       opacity: 0;
@@ -425,6 +306,94 @@
       .strip-2-img {
         max-width: 98vw;
         border-radius: 12px;
+      }
+    }
+    /* Strip 3: Fashion Gallery Styles */
+    .strip-3 {
+      width: 100vw;
+      background: #f8f6f2;
+      padding: 64px 0 48px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .strip-3-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+    .strip-3-header {
+      margin-bottom: 32px;
+    }
+    .strip-3-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #bfa76a;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+    }
+    .strip-3-desc {
+      font-size: 1.15rem;
+      color: #222;
+      margin-bottom: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .strip-3-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .strip-3-img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+      object-fit: cover;
+      transition: transform 0.2s;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+    .strip-3-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .btn-explore {
+      background: #bfa76a;
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 600;
+      border-radius: 24px;
+      padding: 12px 38px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s, color 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: none;
+      outline: none;
+    }
+    .btn-explore:hover {
+      background: #d32f2f;
+      color: #fff;
+    }
+    @media (max-width: 991.98px) {
+      .strip-3-inner {
+        padding: 0 8px;
+      }
+      .strip-3-title {
+        font-size: 1.5rem;
+      }
+      .strip-3-desc {
+        font-size: 1rem;
+      }
+      .strip-3-img {
+        max-width: 98vw;
+        border-radius: 10px;
+      }
+      .btn-explore {
+        font-size: 1rem;
+        padding: 10px 24px;
       }
     }
     .site-footer-custom.redesigned-footer {
@@ -604,9 +573,7 @@
           dots: true,
           animateOut: 'fadeOut',
           animateIn: 'fadeIn',
-          smartSpeed: 800,
-          margin: 0,
-          stagePadding: 0
+          smartSpeed: 800
         });
       }
       // Animate Strip 2 on scroll (GROW from bottom)
@@ -623,19 +590,11 @@
       }
       $(window).on('scroll', growOnScroll);
       growOnScroll();
-      // Initialize LightGallery for Fashion Gallery
-      if ($('#fashion-gallery').length && typeof $.fn.lightGallery === 'function') {
-        $('#fashion-gallery').lightGallery({
-          selector: '.strip-3-img-link',
-          thumbnail: true,
-          download: false
-        });
-      }
     });
   </script>
   <script>
-    // Initialize Stellar.js for parallax effect after window load for best results
-    $(window).on('load', function(){
+    // Initialize Stellar.js for parallax effect
+    $(function(){
       if(typeof $.stellar === 'function') {
         $.stellar({
           horizontalScrolling: false,
