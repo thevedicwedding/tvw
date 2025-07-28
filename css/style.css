@@ -1,6 +1,12 @@
 /* Glide-in animation for strips 3, 4, and 5 */
 .strip-3, .strip-4, .strip-5 {
-  transition: opacity 1.8s cubic-bezier(.25,1,.35,1), transform 1.8s cubic-bezier(.25,1,.35,1);
+  opacity: 0;
+  transform: translateY(80px) scaleY(0.95);
+  transition: opacity 2.2s cubic-bezier(.25,1,.35,1), transform 2.2s cubic-bezier(.25,1,.35,1);
+}
+ .strip-3.grow-in, .strip-4.grow-in, .strip-5.grow-in {
+  opacity: 1;
+  transform: translateY(0) scaleY(1);
 }
 /* Base */
 body {
@@ -1618,7 +1624,7 @@ body.index .site-block-category {
   z-index: 1;
   opacity: 0;
   transform: translateY(80px) scaleY(0.95);
-  transition: opacity 0.7s cubic-bezier(.23,1,.32,1), transform 0.7s cubic-bezier(.23,1,.32,1);
+  transition: opacity 2.2s cubic-bezier(.25,1,.35,1), transform 2.2s cubic-bezier(.25,1,.35,1);
 }
 .strip-2.grow-in {
   opacity: 1;
