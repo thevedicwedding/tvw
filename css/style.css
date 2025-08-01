@@ -1594,6 +1594,7 @@ body.index .site-block-category {
   .strip-1-inner {
     padding: 12px 0;
     height: auto;
+    margin-top: var(--navbar-height, 80px) !important;
   }
   .strip-1-slideshow {
     width: 98vw;
@@ -1609,7 +1610,33 @@ body.index .site-block-category {
     border-radius: 10px;
     height: 220px;
     width: 98vw;
+    object-fit: cover;
+    object-position: center;
   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .strip-1-inner {
+    margin-top: var(--navbar-height, 80px) !important;
+  }
+  .strip-1-slide img {
+    width: 100%;
+    height: 55vw;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+  }
+}
+
+/* General: Make sure slider images are always visible and not cropped weirdly */
+.strip-1-slide img {
+  width: 100vw;
+  height: 100vh;
+  min-height: 220px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 /* Strip 2: Split Text & Image Section Styles */
 .strip-2 {
