@@ -7,14 +7,16 @@
   .strip-1-inner {
     margin-top: var(--navbar-height, 80px) !important;
     padding-top: 0 !important;
+    border-top: none !important;
   }
   .strip-1-slideshow {
     margin-top: 0 !important;
   }
   .strip-1-slide img {
     width: 100vw;
-    height: 220px;
-    min-height: 140px;
+    height: 320px;
+    min-height: 200px;
+    max-height: 60vh;
     object-fit: cover;
     object-position: center;
     background: none !important;
