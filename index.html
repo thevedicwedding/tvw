@@ -93,21 +93,33 @@
     </header>
     <!-- ======= NAVIGATOR SECTION END ======= -->
 
+
     <script>
       // Adjust body padding-top and set --navbar-height CSS variable for correct strip-1 offset
-      document.addEventListener('DOMContentLoaded', function() {
+      function adjustNavAndSliderOffset() {
         var navbar = document.querySelector('.site-navbar');
         var navHeight = navbar ? navbar.offsetHeight : 80;
         document.body.style.paddingTop = navHeight + 'px';
         document.documentElement.style.setProperty('--navbar-height', navHeight + 'px');
-      });
+        // For mobile/iPad, also set margin-top on strip-1 to avoid cropping
+        var strip1 = document.getElementById('strip1-inner');
+        if (strip1) {
+          if (window.innerWidth <= 991.98) {
+            strip1.style.marginTop = navHeight + 'px';
+          } else {
+            strip1.style.marginTop = '';
+          }
+        }
+      }
+      window.addEventListener('DOMContentLoaded', adjustNavAndSliderOffset);
+      window.addEventListener('resize', adjustNavAndSliderOffset);
     </script>
 
 
 
     <!-- Strip 1: Fullscreen Slideshow -->
     <section class="strip-1">
-      <div class="strip-1-inner">
+      <div class="strip-1-inner" id="strip1-inner">
         <div class="strip-1-slideshow owl-carousel">
           <div class="strip-1-slide"><img src="images/1.jpg" alt="Gallery Image 1"></div>
           <div class="strip-1-slide"><img src="images/2.jpg" alt="Gallery Image 2"></div>
