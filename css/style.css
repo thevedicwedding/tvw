@@ -2041,3 +2041,66 @@ body.index .site-block-category {
     max-height: 180px !important;
   }
 }
+
+/* --- Mobile/iPad Navbar & Slider Fix --- */
+@media (max-width: 991.98px) {
+  .site-navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 9999 !important;
+    background: #fff !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin-bottom: 0 !important;
+  }
+  body {
+    padding-top: 64px !important;
+  }
+  .site-navbar .site-logo {
+    left: 16px;
+    top: 8px;
+    height: 40px;
+    min-width: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    z-index: 10001;
+  }
+  .site-navbar .site-logo img {
+    max-height: 32px;
+    max-width: 90px;
+  }
+  .site-navbar .site-navigation .site-menu > li {
+    padding: 8px 2px;
+  }
+  .site-navbar .site-navigation .site-menu > li > a {
+    font-size: 13px;
+    padding: 10px 8px;
+  }
+  .site-navbar .site-navigation {
+    width: 100vw;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  .site-navbar .site-navigation .site-menu {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background: transparent;
+  }
+  .site-navbar .site-navigation .site-menu > li > a {
+    color: #111 !important;
+    background: none !important;
+    border-radius: 0 !important;
+  }
+  .site-navbar .site-navigation .site-menu > li > a:hover,
+  .site-navbar .site-navigation .site-menu > li > a:focus {
+    color: #d32f2f !important;
+    background: none !important;
+  }
+  .site-navbar .site-navigation .site-menu .has-children .dropdown {
+    background: #fff !important;
+  }
+}
