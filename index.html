@@ -325,6 +325,9 @@
       vertical-align: top;
     }
     @media (max-width: 991.98px) {
+      body {
+        padding-top: var(--navbar-height, 80px) !important;
+      }
       .strip-1,
       .strip-1-inner,
       .strip-1-slideshow {
@@ -332,16 +335,22 @@
         height: 220px;
         min-height: 140px;
         margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+      .strip-1-inner {
+        margin-top: var(--navbar-height, 80px) !important;
       }
       .strip-1-slide img {
         width: 100vw;
         height: 220px;
         min-height: 140px;
-        object-fit: contain;
+        object-fit: cover;
+        object-position: center;
         background: none !important;
         vertical-align: top;
         margin-bottom: 0 !important;
         border: none !important;
+        display: block;
       }
     }
     /* Strip 2: Split Text & Image Section Styles */
