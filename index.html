@@ -94,12 +94,12 @@
     <!-- ======= NAVIGATOR SECTION END ======= -->
 
     <script>
-      // Adjust body padding-top to navbar height to prevent content overlap
+      // Adjust body padding-top and set --navbar-height CSS variable for correct strip-1 offset
       document.addEventListener('DOMContentLoaded', function() {
         var navbar = document.querySelector('.site-navbar');
-        if (navbar) {
-          document.body.style.paddingTop = navbar.offsetHeight + 'px';
-        }
+        var navHeight = navbar ? navbar.offsetHeight : 80;
+        document.body.style.paddingTop = navHeight + 'px';
+        document.documentElement.style.setProperty('--navbar-height', navHeight + 'px');
       });
     </script>
 
@@ -274,22 +274,19 @@
     /* Strip 1: Fullscreen Slideshow Styles */
     .strip-1 {
       width: 100vw;
-      max-width: 1920px;
       height: 800px;
-      margin: 0 auto;
       padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
-      background: #000;
+      margin-top: var(--navbar-height, 80px);
+      background: none;
     }
     .strip-1-inner {
       width: 100vw;
-      max-width: 1920px;
       height: 800px;
-      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -298,34 +295,32 @@
     }
     .strip-1-slideshow {
       width: 100vw;
-      max-width: 1920px;
       height: 800px;
-      margin: 0 auto;
       position: relative;
     }
     .strip-1-slide img {
       width: 100vw;
-      max-width: 1920px;
       height: 800px;
       object-fit: cover;
       display: block;
       margin: 0 auto;
+      background: #000;
     }
     @media (max-width: 991.98px) {
       .strip-1,
       .strip-1-inner,
       .strip-1-slideshow {
         width: 100vw;
-        max-width: 100vw;
         height: 320px;
         min-height: 180px;
+        margin-top: var(--navbar-height, 60px);
       }
       .strip-1-slide img {
         width: 100vw;
-        max-width: 100vw;
         height: 320px;
         min-height: 180px;
         object-fit: cover;
+        background: #000;
       }
     }
     /* Strip 2: Split Text & Image Section Styles */
