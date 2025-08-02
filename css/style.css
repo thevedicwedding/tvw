@@ -764,12 +764,12 @@ a {
 .slide-one-item .owl-item .slide-img,
 .slide-one-item .slide-img,
 .site-blocks-cover .slide-img {
-  width: 100vw !important;
-  height: 100vh !important;
+  width: 100%;
+  height: auto;
   max-width: 100vw !important;
-  max-height: 100vh !important;
-  min-height: 600px;
-  object-fit: cover !important;
+  max-height: 80vh !important;
+  min-height: 400px;
+  object-fit: contain !important;
   object-position: center center !important;
   display: block;
   margin: 0 auto;
