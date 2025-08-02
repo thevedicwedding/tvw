@@ -5,7 +5,7 @@
   }
   .strip-1,
   .strip-1-inner {
-    margin-top: var(--navbar-height, 80px) !important;
+    margin-top: calc(var(--navbar-height, 80px) - 10px) !important;
     padding-top: 0 !important;
     border-top: none !important;
   }
@@ -14,9 +14,9 @@
   }
   .strip-1-slide img {
     width: 100vw;
-    height: 320px;
-    min-height: 200px;
-    max-height: 60vh;
+    height: 420px;
+    min-height: 320px;
+    max-height: 80vh;
     object-fit: cover;
     object-position: center;
     background: none !important;
@@ -754,6 +754,8 @@ a {
   .site-blocks-cover .owl-carousel,
   .site-blocks-cover .home-slider {
     display: block !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 }
 
@@ -1576,6 +1578,8 @@ body.index .site-block-category {
   min-height: 100vh;
   position: relative;
   z-index: 1;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 .strip-1-inner {
   width: 100vw;
