@@ -1,7 +1,10 @@
 /* --- Mobile fix: Ensure slider is always below navbar, never hidden or cropped --- */
 @media (max-width: 991.98px) {
   body {
-    padding-top: var(--navbar-height, 80px) !important;
+    padding-top: 0 !important;
+  }
+  .site-navbar {
+    position: static !important;
   }
   .strip-1,
   .strip-1-inner {
@@ -2110,7 +2113,7 @@ body.index .site-block-category {
     z-index: 1000;
   }
   body {
-    padding-top: 70px !important; /* Adjust if your mobile navbar is taller/shorter */
+    padding-top: 0 !important; /* Adjust if your mobile navbar is taller/shorter */
   }
   .strip-1 {
     min-height: unset;
