@@ -2146,3 +2146,29 @@ body.index .site-block-category {
     margin-top: 0 !important;
   }
 }
+
+/* Desktop: Make slider fill the whole screen */
+.strip-1,
+.strip-1-inner,
+.strip-1-slideshow {
+  height: 100vh !important;
+  min-height: 100vh !important;
+}
+.strip-1-slide img {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  object-fit: cover !important;
+}
+@media (max-width: 991.98px) {
+  .strip-1,
+  .strip-1-inner,
+  .strip-1-slideshow {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+  .strip-1-slide img {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    object-fit: cover !important;
+  }
+}
