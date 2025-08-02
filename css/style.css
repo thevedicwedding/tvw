@@ -5,7 +5,7 @@
   }
   .strip-1,
   .strip-1-inner {
-    margin-top: calc(var(--navbar-height, 80px) - 10px) !important;
+    margin-top: 0 !important;
     padding-top: 0 !important;
     border-top: none !important;
   }
